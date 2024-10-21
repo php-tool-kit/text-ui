@@ -30,9 +30,14 @@
         "squizlabs/php_codesniffer": "*"
     },
     "scripts": {
-        "phpstan": "phpstan analyse -v -c phpstan.neon",
+        "phpstan": "phpstan analyse -v --level=8 src",
         "phpmd": "phpmd src ansi cleancode,codesize,controversial,design,naming,unusedcode -v --color",
         "phpcs": "phpcs --standard=PSR12 src",
         "phpcbf": "phpcbf --standard=PSR12 src"
+    },
+    "config": {
+        "allow-plugins": {
+            "symfony/flex": true
+        }
     }
 }
