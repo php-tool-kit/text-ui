@@ -34,7 +34,8 @@
         "phpstan": "phpstan analyse -v --level=8 src",
         "phpmd": "phpmd src ansi cleancode,codesize,controversial,design,naming,unusedcode -v --color",
         "phpcs": "phpcs --standard=PSR12 src",
-        "phpcbf": "phpcbf --standard=PSR12 src"
+        "phpcbf": "phpcbf --standard=PSR12 src",
+        "doxygen": "doxygen Doxyfile"
     },
     "config": {
         "allow-plugins": {
