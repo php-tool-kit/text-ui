@@ -4,7 +4,7 @@
     "type": "library",
     "keywords": ["tui", "text user interface", "widget", "terminal", "console"],
     "homepage": "https://github.com/php-tool-kit/text-ui",
-    "licence": "MIT",
+    "license": "MIT",
     "authors": [
         {
             "name": "Everton da Rosa",
