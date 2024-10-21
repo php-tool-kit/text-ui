@@ -1,6 +1,9 @@
 var annotated_dup =
 [
     [ "TextUI", "namespace_text_u_i.html", [
+      [ "Exception", "namespace_text_u_i_1_1_exception.html", [
+        [ "UnknowOSException", "class_text_u_i_1_1_exception_1_1_unknow_o_s_exception.html", "class_text_u_i_1_1_exception_1_1_unknow_o_s_exception" ]
+      ] ],
       [ "Input", "namespace_text_u_i_1_1_input.html", [
         [ "DateEntry", "class_text_u_i_1_1_input_1_1_date_entry.html", "class_text_u_i_1_1_input_1_1_date_entry" ],
         [ "EntryInterface", "interface_text_u_i_1_1_input_1_1_entry_interface.html", "interface_text_u_i_1_1_input_1_1_entry_interface" ],
@@ -24,10 +27,5 @@ var annotated_dup =
         [ "Command", "class_text_u_i_1_1_screen_1_1_command.html", "class_text_u_i_1_1_screen_1_1_command" ]
       ] ],
       [ "Utils", "class_text_u_i_1_1_utils.html", null ]
-    ] ],
-    [ "WebUI", null, [
-      [ "Exception", "namespace_web_u_i_1_1_exception.html", [
-        [ "UnknowOSException", "class_web_u_i_1_1_exception_1_1_unknow_o_s_exception.html", "class_web_u_i_1_1_exception_1_1_unknow_o_s_exception" ]
-      ] ]
     ] ]
 ];

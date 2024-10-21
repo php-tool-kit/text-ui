@@ -1,8 +1,8 @@
 var indexSectionsWithContent =
 {
-  0: "$_bcdeghilmnoprstuw",
+  0: "$_bcdeghilmnoprstu",
   1: "bcdehlmnpstu",
-  2: "tw",
+  2: "t",
   3: "bcdehlmnopstu",
   4: "_bcdegiprsu",
   5: "$cg",

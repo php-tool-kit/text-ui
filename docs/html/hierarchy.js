@@ -15,7 +15,7 @@ var hierarchy =
       [ "TextEntry", "class_text_u_i_1_1_input_1_1_text_entry.html", null ]
     ] ],
     [ "Exception", null, [
-      [ "UnknowOSException", "class_web_u_i_1_1_exception_1_1_unknow_o_s_exception.html", null ]
+      [ "UnknowOSException", "class_text_u_i_1_1_exception_1_1_unknow_o_s_exception.html", null ]
     ] ],
     [ "MeterInterface", "interface_text_u_i_1_1_output_1_1_meter_interface.html", [
       [ "Loader", "class_text_u_i_1_1_output_1_1_loader.html", null ],

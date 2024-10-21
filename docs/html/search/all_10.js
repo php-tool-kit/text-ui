@@ -8,7 +8,8 @@ var searchData=
   ['textmultilineentry_2ephp_5',['TextMultiLineEntry.php',['../_text_multi_line_entry_8php.html',1,'']]],
   ['textui_6',['TextUI',['../namespace_text_u_i.html',1,'']]],
   ['textui_3a_3aenum_7',['Enum',['../namespace_text_u_i_1_1_enum.html',1,'TextUI']]],
-  ['textui_3a_3ainput_8',['Input',['../namespace_text_u_i_1_1_input.html',1,'TextUI']]],
-  ['textui_3a_3aoutput_9',['Output',['../namespace_text_u_i_1_1_output.html',1,'TextUI']]],
-  ['textui_3a_3ascreen_10',['Screen',['../namespace_text_u_i_1_1_screen.html',1,'TextUI']]]
+  ['textui_3a_3aexception_8',['Exception',['../namespace_text_u_i_1_1_exception.html',1,'TextUI']]],
+  ['textui_3a_3ainput_9',['Input',['../namespace_text_u_i_1_1_input.html',1,'TextUI']]],
+  ['textui_3a_3aoutput_10',['Output',['../namespace_text_u_i_1_1_output.html',1,'TextUI']]],
+  ['textui_3a_3ascreen_11',['Screen',['../namespace_text_u_i_1_1_screen.html',1,'TextUI']]]
 ];
