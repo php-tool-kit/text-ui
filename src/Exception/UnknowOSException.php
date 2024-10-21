@@ -1,6 +1,6 @@
 <?php
 
-namespace WebUI\Exception;
+namespace TextUI\Exception;
 
 /**
  * Description of UnknowOSException

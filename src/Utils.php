@@ -5,7 +5,7 @@ namespace TextUI;
 use DateException;
 use TextUI\Enum\OperatingSystem;
 use UnexpectedValueException;
-use WebUI\Exception\UnknowOSException;
+use TextUI\Exception\UnknowOSException;
 
 /**
  * Utils for TextUI.
