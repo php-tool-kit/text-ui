@@ -169,304 +169,305 @@ $(function(){initNavTree('_table_8php_source.html',''); initResizable(true); });
 <div class="line"><a id="l00124" name="l00124"></a><span class="lineno"><a class="line" href="class_text_u_i_1_1_output_1_1_table.html#a9b9ae50a3676cadd0b30c051d35df139">  124</a></span>    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code hl_function" href="class_text_u_i_1_1_output_1_1_table.html#a9b9ae50a3676cadd0b30c051d35df139">setColWidths</a>(array $widths): <a class="code hl_class" href="class_text_u_i_1_1_output_1_1_table.html">Table</a></div>
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    {</div>
 <div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>        <span class="keywordflow">if</span> (count($widths) !== count($this-&gt;data[array_key_first($this-&gt;data)])) {</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>            <span class="keywordflow">throw</span> <span class="keyword">new</span> InvalidArgumentException(<span class="stringliteral">&quot;Number of column widths must be equal to the number of columns in the data.&quot;</span>);</div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>        }</div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>        $this-&gt;width = $widths;</div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        <span class="keywordflow">return</span> $this;</div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    }</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>            <span class="keywordflow">throw</span> <span class="keyword">new</span> InvalidArgumentException(<span class="stringliteral">&quot;Number of column widths must be &quot;</span></div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>                    . <span class="stringliteral">&quot;equal to the number of columns in the data.&quot;</span>);</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>        }</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        $this-&gt;width = $widths;</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>        <span class="keywordflow">return</span> $this;</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    }</div>
 </div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span> </div>
-<div class="foldopen" id="foldopen00144" data-start="{" data-end="}">
-<div class="line"><a id="l00144" name="l00144"></a><span class="lineno"><a class="line" href="class_text_u_i_1_1_output_1_1_table.html#ac2cbc5aa1684a3b96a5bc13b8ccbd97d">  144</a></span>    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code hl_function" href="class_text_u_i_1_1_output_1_1_table.html#ac2cbc5aa1684a3b96a5bc13b8ccbd97d">setHorizontalAlignements</a>(array $alignements): <a class="code hl_class" href="class_text_u_i_1_1_output_1_1_table.html">Table</a></div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    {</div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>        $this-&gt;align = $alignements;</div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>        <span class="keywordflow">return</span> $this;</div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    }</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span> </div>
+<div class="foldopen" id="foldopen00145" data-start="{" data-end="}">
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno"><a class="line" href="class_text_u_i_1_1_output_1_1_table.html#ac2cbc5aa1684a3b96a5bc13b8ccbd97d">  145</a></span>    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code hl_function" href="class_text_u_i_1_1_output_1_1_table.html#ac2cbc5aa1684a3b96a5bc13b8ccbd97d">setHorizontalAlignements</a>(array $alignements): <a class="code hl_class" href="class_text_u_i_1_1_output_1_1_table.html">Table</a></div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    {</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>        $this-&gt;align = $alignements;</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>        <span class="keywordflow">return</span> $this;</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    }</div>
 </div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span> </div>
-<div class="foldopen" id="foldopen00157" data-start="{" data-end="}">
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno"><a class="line" href="class_text_u_i_1_1_output_1_1_table.html#afd44e62db60c5ec9f3f5e76a3c2d32ba">  157</a></span>    <span class="keyword">protected</span> <span class="keyword">function</span> <a class="code hl_function" href="class_text_u_i_1_1_output_1_1_table.html#afd44e62db60c5ec9f3f5e76a3c2d32ba">buildFooterStr</a>(array <a class="code hl_variable" href="class_text_u_i_1_1_output_1_1_table.html#a6f76743cf9e3e6c5a557ae03460ea86b">$footer</a>, array $colsLen, array <a class="code hl_variable" href="class_text_u_i_1_1_output_1_1_table.html#a999d191b3096db52b721ddfc6f744a1f">$align</a>): string</div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>    {</div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>        $str = <span class="stringliteral">&#39;&#39;</span>;</div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>        $dataSplitted = $this-&gt;<a class="code hl_function" href="class_text_u_i_1_1_output_1_1_table.html#aee3614c99a34639c6a85c17dba038113">splitCells</a>([$footer], $colsLen);</div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>        <span class="keywordflow">foreach</span> ($dataSplitted as $row) {</div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>            $maxParagraph = $this-&gt;<a class="code hl_function" href="class_text_u_i_1_1_output_1_1_table.html#a25b1c0552d032bb4110975fc3d350b47">calcMaxParagraphByRow</a>($row);</div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>            <span class="keywordflow">for</span> ($paragraphCounter = 0; $paragraphCounter &lt; $maxParagraph; $paragraphCounter++) {</div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>                $colCounter = 0;</div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>                <span class="keywordflow">foreach</span> ($row as $col) {</div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>                    $alignment = $this-&gt;<a class="code hl_function" href="class_text_u_i_1_1_output_1_1_table.html#a2258657ff1d23be0f2433ab7c93a457f">getAlign</a>($colCounter, <a class="code hl_variable" href="class_text_u_i_1_1_output_1_1_table.html#a999d191b3096db52b721ddfc6f744a1f">$align</a>);</div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>                    $content = str_pad($col[$paragraphCounter] ?? <span class="stringliteral">&#39;&#39;</span>, ($colsLen[$colCounter] - 4), <span class="charliteral">&#39; &#39;</span>, $alignment);</div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>                    $str .= <span class="stringliteral">&quot;{$this-&gt;verticalBorderChar} {$content} &quot;</span>;</div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>                    $colCounter++;</div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>                }</div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>                $str .= $this-&gt;verticalBorderChar . PHP_EOL;</div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>            }</div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>        }</div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>        $str .= $this-&gt;<a class="code hl_function" href="class_text_u_i_1_1_output_1_1_table.html#aed528cbb6573b19f79fe5561b1114652">buildHeaderHorizontalSeparatorStr</a>($colsLen);</div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>        <span class="keywordflow">return</span> $str;</div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>    }</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span> </div>
+<div class="foldopen" id="foldopen00158" data-start="{" data-end="}">
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno"><a class="line" href="class_text_u_i_1_1_output_1_1_table.html#afd44e62db60c5ec9f3f5e76a3c2d32ba">  158</a></span>    <span class="keyword">protected</span> <span class="keyword">function</span> <a class="code hl_function" href="class_text_u_i_1_1_output_1_1_table.html#afd44e62db60c5ec9f3f5e76a3c2d32ba">buildFooterStr</a>(array <a class="code hl_variable" href="class_text_u_i_1_1_output_1_1_table.html#a6f76743cf9e3e6c5a557ae03460ea86b">$footer</a>, array $colsLen, array <a class="code hl_variable" href="class_text_u_i_1_1_output_1_1_table.html#a999d191b3096db52b721ddfc6f744a1f">$align</a>): string</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    {</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>        $str = <span class="stringliteral">&#39;&#39;</span>;</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>        $dataSplitted = $this-&gt;<a class="code hl_function" href="class_text_u_i_1_1_output_1_1_table.html#aee3614c99a34639c6a85c17dba038113">splitCells</a>([$footer], $colsLen);</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>        <span class="keywordflow">foreach</span> ($dataSplitted as $row) {</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>            $maxParagraph = $this-&gt;<a class="code hl_function" href="class_text_u_i_1_1_output_1_1_table.html#a25b1c0552d032bb4110975fc3d350b47">calcMaxParagraphByRow</a>($row);</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>            <span class="keywordflow">for</span> ($paragraphCounter = 0; $paragraphCounter &lt; $maxParagraph; $paragraphCounter++) {</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>                $colCounter = 0;</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>                <span class="keywordflow">foreach</span> ($row as $col) {</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>                    $alignment = $this-&gt;<a class="code hl_function" href="class_text_u_i_1_1_output_1_1_table.html#a2258657ff1d23be0f2433ab7c93a457f">getAlign</a>($colCounter, <a class="code hl_variable" href="class_text_u_i_1_1_output_1_1_table.html#a999d191b3096db52b721ddfc6f744a1f">$align</a>);</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>                    $content = str_pad($col[$paragraphCounter] ?? <span class="stringliteral">&#39;&#39;</span>, ($colsLen[$colCounter] - 4), <span class="charliteral">&#39; &#39;</span>, $alignment);</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>                    $str .= <span class="stringliteral">&quot;{$this-&gt;verticalBorderChar} {$content} &quot;</span>;</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>                    $colCounter++;</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>                }</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>                $str .= $this-&gt;verticalBorderChar . PHP_EOL;</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>            }</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>        }</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>        $str .= $this-&gt;<a class="code hl_function" href="class_text_u_i_1_1_output_1_1_table.html#aed528cbb6573b19f79fe5561b1114652">buildHeaderHorizontalSeparatorStr</a>($colsLen);</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>        <span class="keywordflow">return</span> $str;</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>    }</div>
 </div>
-<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span> </div>
-<div class="foldopen" id="foldopen00185" data-start="{" data-end="}">
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno"><a class="line" href="class_text_u_i_1_1_output_1_1_table.html#a8b2c118bfff1d3d425ffff1cc9165d90">  185</a></span>    <span class="keyword">protected</span> <span class="keyword">function</span> <a class="code hl_function" href="class_text_u_i_1_1_output_1_1_table.html#a8b2c118bfff1d3d425ffff1cc9165d90">buildHeaderStr</a>(array <a class="code hl_variable" href="class_text_u_i_1_1_output_1_1_table.html#a40dc1ea6e2c54c1c25d4e5b45278a9fc">$header</a>, array $colsLen, array <a class="code hl_variable" href="class_text_u_i_1_1_output_1_1_table.html#a999d191b3096db52b721ddfc6f744a1f">$align</a>): string</div>
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>    {</div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>        $str = <span class="stringliteral">&#39;&#39;</span>;</div>
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>        $hBorder = $this-&gt;<a class="code hl_function" href="class_text_u_i_1_1_output_1_1_table.html#aed528cbb6573b19f79fe5561b1114652">buildHeaderHorizontalSeparatorStr</a>($colsLen);</div>
-<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span> </div>
-<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>        $dataSplitted = $this-&gt;<a class="code hl_function" href="class_text_u_i_1_1_output_1_1_table.html#aee3614c99a34639c6a85c17dba038113">splitCells</a>([$header], $colsLen);</div>
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span> </div>
-<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>        <span class="keywordflow">foreach</span> ($dataSplitted as $row) {</div>
-<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>            $str .= $hBorder;</div>
-<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span> </div>
-<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>            $maxParagraph = $this-&gt;<a class="code hl_function" href="class_text_u_i_1_1_output_1_1_table.html#a25b1c0552d032bb4110975fc3d350b47">calcMaxParagraphByRow</a>($row);</div>
-<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>            <span class="keywordflow">for</span> ($paragraphCounter = 0; $paragraphCounter &lt; $maxParagraph; $paragraphCounter++) {</div>
-<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>                $colCounter = 0;</div>
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>                <span class="keywordflow">foreach</span> ($row as $col) {</div>
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>                    $alignment = $this-&gt;<a class="code hl_function" href="class_text_u_i_1_1_output_1_1_table.html#a2258657ff1d23be0f2433ab7c93a457f">getAlign</a>($colCounter, <a class="code hl_variable" href="class_text_u_i_1_1_output_1_1_table.html#a999d191b3096db52b721ddfc6f744a1f">$align</a>);</div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>                    $content = str_pad($col[$paragraphCounter] ?? <span class="stringliteral">&#39;&#39;</span>, ($colsLen[$colCounter] - 4), <span class="charliteral">&#39; &#39;</span>, $alignment);</div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>                    $str .= <span class="stringliteral">&quot;{$this-&gt;verticalBorderChar} {$content} &quot;</span>;</div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>                    $colCounter++;</div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>                }</div>
-<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>                $str .= $this-&gt;verticalBorderChar . PHP_EOL;</div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>            }</div>
-<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>        }</div>
-<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span> </div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span> </div>
+<div class="foldopen" id="foldopen00186" data-start="{" data-end="}">
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno"><a class="line" href="class_text_u_i_1_1_output_1_1_table.html#a8b2c118bfff1d3d425ffff1cc9165d90">  186</a></span>    <span class="keyword">protected</span> <span class="keyword">function</span> <a class="code hl_function" href="class_text_u_i_1_1_output_1_1_table.html#a8b2c118bfff1d3d425ffff1cc9165d90">buildHeaderStr</a>(array <a class="code hl_variable" href="class_text_u_i_1_1_output_1_1_table.html#a40dc1ea6e2c54c1c25d4e5b45278a9fc">$header</a>, array $colsLen, array <a class="code hl_variable" href="class_text_u_i_1_1_output_1_1_table.html#a999d191b3096db52b721ddfc6f744a1f">$align</a>): string</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>    {</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>        $str = <span class="stringliteral">&#39;&#39;</span>;</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>        $hBorder = $this-&gt;<a class="code hl_function" href="class_text_u_i_1_1_output_1_1_table.html#aed528cbb6573b19f79fe5561b1114652">buildHeaderHorizontalSeparatorStr</a>($colsLen);</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span> </div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>        $dataSplitted = $this-&gt;<a class="code hl_function" href="class_text_u_i_1_1_output_1_1_table.html#aee3614c99a34639c6a85c17dba038113">splitCells</a>([$header], $colsLen);</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span> </div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>        <span class="keywordflow">foreach</span> ($dataSplitted as $row) {</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>            $str .= $hBorder;</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span> </div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>            $maxParagraph = $this-&gt;<a class="code hl_function" href="class_text_u_i_1_1_output_1_1_table.html#a25b1c0552d032bb4110975fc3d350b47">calcMaxParagraphByRow</a>($row);</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>            <span class="keywordflow">for</span> ($paragraphCounter = 0; $paragraphCounter &lt; $maxParagraph; $paragraphCounter++) {</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>                $colCounter = 0;</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>                <span class="keywordflow">foreach</span> ($row as $col) {</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>                    $alignment = $this-&gt;<a class="code hl_function" href="class_text_u_i_1_1_output_1_1_table.html#a2258657ff1d23be0f2433ab7c93a457f">getAlign</a>($colCounter, <a class="code hl_variable" href="class_text_u_i_1_1_output_1_1_table.html#a999d191b3096db52b721ddfc6f744a1f">$align</a>);</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>                    $content = str_pad($col[$paragraphCounter] ?? <span class="stringliteral">&#39;&#39;</span>, ($colsLen[$colCounter] - 4), <span class="charliteral">&#39; &#39;</span>, $alignment);</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>                    $str .= <span class="stringliteral">&quot;{$this-&gt;verticalBorderChar} {$content} &quot;</span>;</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>                    $colCounter++;</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>                }</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>                $str .= $this-&gt;verticalBorderChar . PHP_EOL;</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>            }</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>        }</div>
 <div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span> </div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>        <span class="keywordflow">return</span> $str;</div>
-<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>    }</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span> </div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>        <span class="keywordflow">return</span> $str;</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>    }</div>
 </div>
-<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span> </div>
-<div class="foldopen" id="foldopen00220" data-start="{" data-end="}">
-<div class="line"><a id="l00220" name="l00220"></a><span class="lineno"><a class="line" href="class_text_u_i_1_1_output_1_1_table.html#a1f9b51a2ca4e982ef4cbfb06f46b569b">  220</a></span>    <span class="keyword">protected</span> <span class="keyword">function</span> <a class="code hl_function" href="class_text_u_i_1_1_output_1_1_table.html#a1f9b51a2ca4e982ef4cbfb06f46b569b">buildBodyStr</a>(array $bodyData, array $colsLen, array <a class="code hl_variable" href="class_text_u_i_1_1_output_1_1_table.html#a999d191b3096db52b721ddfc6f744a1f">$align</a>): string</div>
-<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>    {</div>
-<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>        $str = <span class="stringliteral">&#39;&#39;</span>;</div>
-<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>        $dataSplitted = $this-&gt;<a class="code hl_function" href="class_text_u_i_1_1_output_1_1_table.html#aee3614c99a34639c6a85c17dba038113">splitCells</a>($bodyData, $colsLen);</div>
-<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>        <span class="keywordflow">foreach</span> ($dataSplitted as $rowIndex =&gt; $row) {</div>
-<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>            <span class="keywordflow">switch</span> ($rowIndex) {</div>
-<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>                <span class="keywordflow">case</span> 0:</div>
-<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>                    $str .= $this-&gt;<a class="code hl_function" href="class_text_u_i_1_1_output_1_1_table.html#aed528cbb6573b19f79fe5561b1114652">buildHeaderHorizontalSeparatorStr</a>($colsLen);</div>
-<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>                <span class="keywordflow">default</span>:</div>
-<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>                    $str .= $this-&gt;<a class="code hl_function" href="class_text_u_i_1_1_output_1_1_table.html#a63b964dc8287e28bf40914d7fe3299b9">buildBodyHorizontalSeparatorStr</a>($colsLen);</div>
-<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>            }</div>
-<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>            $maxParagraph = $this-&gt;<a class="code hl_function" href="class_text_u_i_1_1_output_1_1_table.html#a25b1c0552d032bb4110975fc3d350b47">calcMaxParagraphByRow</a>($row);</div>
-<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>            <span class="keywordflow">for</span> ($paragraphCounter = 0; $paragraphCounter &lt; $maxParagraph; $paragraphCounter++) {</div>
-<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>                $colCounter = 0;</div>
-<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>                <span class="keywordflow">foreach</span> ($row as $col) {</div>
-<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>                    $alignment = $this-&gt;<a class="code hl_function" href="class_text_u_i_1_1_output_1_1_table.html#a2258657ff1d23be0f2433ab7c93a457f">getAlign</a>($colCounter, <a class="code hl_variable" href="class_text_u_i_1_1_output_1_1_table.html#a999d191b3096db52b721ddfc6f744a1f">$align</a>);</div>
-<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>                    <span class="keywordflow">switch</span> (key_exists($paragraphCounter, $col)) {</div>
-<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>                        <span class="keywordflow">case</span> <span class="keyword">true</span>:</div>
-<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>                            $paragraph = $col[$paragraphCounter];</div>
-<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>                            <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>                        <span class="keywordflow">default</span>:</div>
-<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>                            $paragraph = <span class="stringliteral">&#39;&#39;</span>;</div>
-<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>                    }</div>
-<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>                    $content = str_pad($paragraph, ($colsLen[$colCounter] - 4), <span class="charliteral">&#39; &#39;</span>, $alignment);</div>
-<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>                    $str .= <span class="stringliteral">&quot;{$this-&gt;verticalBorderChar} {$content} &quot;</span>;</div>
-<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>                    $colCounter++;</div>
-<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>                }</div>
-<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>                $str .= $this-&gt;verticalBorderChar . PHP_EOL;</div>
-<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>            }</div>
-<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>        }</div>
-<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>        $str .= $this-&gt;<a class="code hl_function" href="class_text_u_i_1_1_output_1_1_table.html#aed528cbb6573b19f79fe5561b1114652">buildHeaderHorizontalSeparatorStr</a>($colsLen);</div>
-<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>        <span class="keywordflow">return</span> $str;</div>
-<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>    }</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span> </div>
+<div class="foldopen" id="foldopen00221" data-start="{" data-end="}">
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno"><a class="line" href="class_text_u_i_1_1_output_1_1_table.html#a1f9b51a2ca4e982ef4cbfb06f46b569b">  221</a></span>    <span class="keyword">protected</span> <span class="keyword">function</span> <a class="code hl_function" href="class_text_u_i_1_1_output_1_1_table.html#a1f9b51a2ca4e982ef4cbfb06f46b569b">buildBodyStr</a>(array $bodyData, array $colsLen, array <a class="code hl_variable" href="class_text_u_i_1_1_output_1_1_table.html#a999d191b3096db52b721ddfc6f744a1f">$align</a>): string</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>    {</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>        $str = <span class="stringliteral">&#39;&#39;</span>;</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>        $dataSplitted = $this-&gt;<a class="code hl_function" href="class_text_u_i_1_1_output_1_1_table.html#aee3614c99a34639c6a85c17dba038113">splitCells</a>($bodyData, $colsLen);</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>        <span class="keywordflow">foreach</span> ($dataSplitted as $rowIndex =&gt; $row) {</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>            <span class="keywordflow">switch</span> ($rowIndex) {</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>                <span class="keywordflow">case</span> 0:</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>                    $str .= $this-&gt;<a class="code hl_function" href="class_text_u_i_1_1_output_1_1_table.html#aed528cbb6573b19f79fe5561b1114652">buildHeaderHorizontalSeparatorStr</a>($colsLen);</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>                <span class="keywordflow">default</span>:</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>                    $str .= $this-&gt;<a class="code hl_function" href="class_text_u_i_1_1_output_1_1_table.html#a63b964dc8287e28bf40914d7fe3299b9">buildBodyHorizontalSeparatorStr</a>($colsLen);</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>            }</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>            $maxParagraph = $this-&gt;<a class="code hl_function" href="class_text_u_i_1_1_output_1_1_table.html#a25b1c0552d032bb4110975fc3d350b47">calcMaxParagraphByRow</a>($row);</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>            <span class="keywordflow">for</span> ($paragraphCounter = 0; $paragraphCounter &lt; $maxParagraph; $paragraphCounter++) {</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>                $colCounter = 0;</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>                <span class="keywordflow">foreach</span> ($row as $col) {</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>                    $alignment = $this-&gt;<a class="code hl_function" href="class_text_u_i_1_1_output_1_1_table.html#a2258657ff1d23be0f2433ab7c93a457f">getAlign</a>($colCounter, <a class="code hl_variable" href="class_text_u_i_1_1_output_1_1_table.html#a999d191b3096db52b721ddfc6f744a1f">$align</a>);</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>                    <span class="keywordflow">switch</span> (key_exists($paragraphCounter, $col)) {</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>                        <span class="keywordflow">case</span> <span class="keyword">true</span>:</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>                            $paragraph = $col[$paragraphCounter];</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>                            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>                        <span class="keywordflow">default</span>:</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>                            $paragraph = <span class="stringliteral">&#39;&#39;</span>;</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>                    }</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>                    $content = str_pad($paragraph, ($colsLen[$colCounter] - 4), <span class="charliteral">&#39; &#39;</span>, $alignment);</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>                    $str .= <span class="stringliteral">&quot;{$this-&gt;verticalBorderChar} {$content} &quot;</span>;</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>                    $colCounter++;</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>                }</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>                $str .= $this-&gt;verticalBorderChar . PHP_EOL;</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>            }</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>        }</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>        $str .= $this-&gt;<a class="code hl_function" href="class_text_u_i_1_1_output_1_1_table.html#aed528cbb6573b19f79fe5561b1114652">buildHeaderHorizontalSeparatorStr</a>($colsLen);</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>        <span class="keywordflow">return</span> $str;</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>    }</div>
 </div>
-<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span> </div>
-<div class="foldopen" id="foldopen00262" data-start="{" data-end="}">
-<div class="line"><a id="l00262" name="l00262"></a><span class="lineno"><a class="line" href="class_text_u_i_1_1_output_1_1_table.html#a2258657ff1d23be0f2433ab7c93a457f">  262</a></span>    <span class="keyword">protected</span> <span class="keyword">function</span> <a class="code hl_function" href="class_text_u_i_1_1_output_1_1_table.html#a2258657ff1d23be0f2433ab7c93a457f">getAlign</a>(<span class="keywordtype">int</span> $colIndex, array <a class="code hl_variable" href="class_text_u_i_1_1_output_1_1_table.html#a999d191b3096db52b721ddfc6f744a1f">$align</a>): int</div>
-<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>    {</div>
-<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>        <span class="keywordflow">if</span> (key_exists($colIndex, <a class="code hl_variable" href="class_text_u_i_1_1_output_1_1_table.html#a999d191b3096db52b721ddfc6f744a1f">$align</a>)) {</div>
-<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>            <span class="keywordflow">switch</span> (<a class="code hl_variable" href="class_text_u_i_1_1_output_1_1_table.html#a999d191b3096db52b721ddfc6f744a1f">$align</a>[$colIndex]) {</div>
-<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>                <span class="keywordflow">case</span> HAlign::Center:</div>
-<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>                    <span class="keywordflow">return</span> STR_PAD_BOTH;</div>
-<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>                <span class="keywordflow">case</span> HAlign::Left:</div>
-<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>                    <span class="keywordflow">return</span> STR_PAD_RIGHT;</div>
-<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>                <span class="keywordflow">case</span> HAlign::Right:</div>
-<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>                    <span class="keywordflow">return</span> STR_PAD_LEFT;</div>
-<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>                <span class="keywordflow">default</span>:</div>
-<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>                    <span class="keywordflow">throw</span> <span class="keyword">new</span> InvalidArgumentException(<span class="stringliteral">&quot;Invalid align value.&quot;</span>);</div>
-<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>            }</div>
-<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>        }</div>
-<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>        <span class="keywordflow">return</span> STR_PAD_RIGHT;</div>
-<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>    }</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span> </div>
+<div class="foldopen" id="foldopen00263" data-start="{" data-end="}">
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno"><a class="line" href="class_text_u_i_1_1_output_1_1_table.html#a2258657ff1d23be0f2433ab7c93a457f">  263</a></span>    <span class="keyword">protected</span> <span class="keyword">function</span> <a class="code hl_function" href="class_text_u_i_1_1_output_1_1_table.html#a2258657ff1d23be0f2433ab7c93a457f">getAlign</a>(<span class="keywordtype">int</span> $colIndex, array <a class="code hl_variable" href="class_text_u_i_1_1_output_1_1_table.html#a999d191b3096db52b721ddfc6f744a1f">$align</a>): int</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>    {</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>        <span class="keywordflow">if</span> (key_exists($colIndex, <a class="code hl_variable" href="class_text_u_i_1_1_output_1_1_table.html#a999d191b3096db52b721ddfc6f744a1f">$align</a>)) {</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>            <span class="keywordflow">switch</span> (<a class="code hl_variable" href="class_text_u_i_1_1_output_1_1_table.html#a999d191b3096db52b721ddfc6f744a1f">$align</a>[$colIndex]) {</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>                <span class="keywordflow">case</span> HAlign::Center:</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>                    <span class="keywordflow">return</span> STR_PAD_BOTH;</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>                <span class="keywordflow">case</span> HAlign::Left:</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>                    <span class="keywordflow">return</span> STR_PAD_RIGHT;</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>                <span class="keywordflow">case</span> HAlign::Right:</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>                    <span class="keywordflow">return</span> STR_PAD_LEFT;</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>                <span class="keywordflow">default</span>:</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>                    <span class="keywordflow">throw</span> <span class="keyword">new</span> InvalidArgumentException(<span class="stringliteral">&quot;Invalid align value.&quot;</span>);</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>            }</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>        }</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>        <span class="keywordflow">return</span> STR_PAD_RIGHT;</div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>    }</div>
 </div>
-<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span> </div>
-<div class="foldopen" id="foldopen00284" data-start="{" data-end="}">
-<div class="line"><a id="l00284" name="l00284"></a><span class="lineno"><a class="line" href="class_text_u_i_1_1_output_1_1_table.html#a25b1c0552d032bb4110975fc3d350b47">  284</a></span>    <span class="keyword">protected</span> <span class="keyword">function</span> <a class="code hl_function" href="class_text_u_i_1_1_output_1_1_table.html#a25b1c0552d032bb4110975fc3d350b47">calcMaxParagraphByRow</a>(array $row): int</div>
-<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>    {</div>
-<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>        $maxParagraph = 0;</div>
-<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>        <span class="keywordflow">foreach</span> ($row as $col) {</div>
-<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>            $numParagraphs = count($col);</div>
-<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>            <span class="keywordflow">if</span> ($numParagraphs &gt; $maxParagraph) {</div>
-<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>                $maxParagraph = $numParagraphs;</div>
-<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>            }</div>
-<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>        }</div>
-<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>        <span class="keywordflow">return</span> $maxParagraph;</div>
-<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>    }</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span> </div>
+<div class="foldopen" id="foldopen00285" data-start="{" data-end="}">
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno"><a class="line" href="class_text_u_i_1_1_output_1_1_table.html#a25b1c0552d032bb4110975fc3d350b47">  285</a></span>    <span class="keyword">protected</span> <span class="keyword">function</span> <a class="code hl_function" href="class_text_u_i_1_1_output_1_1_table.html#a25b1c0552d032bb4110975fc3d350b47">calcMaxParagraphByRow</a>(array $row): int</div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>    {</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>        $maxParagraph = 0;</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>        <span class="keywordflow">foreach</span> ($row as $col) {</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>            $numParagraphs = count($col);</div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>            <span class="keywordflow">if</span> ($numParagraphs &gt; $maxParagraph) {</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>                $maxParagraph = $numParagraphs;</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>            }</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>        }</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>        <span class="keywordflow">return</span> $maxParagraph;</div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>    }</div>
 </div>
-<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span> </div>
-<div class="foldopen" id="foldopen00303" data-start="{" data-end="}">
-<div class="line"><a id="l00303" name="l00303"></a><span class="lineno"><a class="line" href="class_text_u_i_1_1_output_1_1_table.html#aee3614c99a34639c6a85c17dba038113">  303</a></span>    <span class="keyword">protected</span> <span class="keyword">function</span> <a class="code hl_function" href="class_text_u_i_1_1_output_1_1_table.html#aee3614c99a34639c6a85c17dba038113">splitCells</a>(array <a class="code hl_variable" href="class_text_u_i_1_1_output_1_1_table.html#afdee872084b9ad2e9f2b7d04c1214679">$data</a>, array $colsLen): array</div>
-<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>    {</div>
-<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>        $dataSplitted = [];</div>
-<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>        <span class="keywordflow">foreach</span> (<a class="code hl_variable" href="class_text_u_i_1_1_output_1_1_table.html#afdee872084b9ad2e9f2b7d04c1214679">$data</a> as $rowIndex =&gt; $row) {</div>
-<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>            $colCounter = 0;</div>
-<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>            <span class="keywordflow">foreach</span> ($row as $colIndex =&gt; $cell) {</div>
-<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>                $len = ($colsLen[$colCounter] - 4);</div>
-<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>                <span class="keywordflow">if</span> ($len &lt; 1) {</div>
-<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>                    <span class="keywordflow">throw</span> <span class="keyword">new</span> InvalidArgumentException(<span class="stringliteral">&#39;Width of column not less than 0.&#39;</span>);</div>
-<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>                }</div>
-<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>                settype($cell, <span class="stringliteral">&#39;string&#39;</span>);</div>
-<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>                $dataSplitted [$rowIndex][$colIndex] = <a class="code hl_function" href="class_text_u_i_1_1_utils.html#a35530d517765736b53e5380fbb3e1412">Utils::strToParagraph</a>($cell, $len);</div>
-<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>                $colCounter++;</div>
-<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>            }</div>
-<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>        }</div>
-<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>        <span class="keywordflow">return</span> $dataSplitted;</div>
-<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>    }</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span> </div>
+<div class="foldopen" id="foldopen00304" data-start="{" data-end="}">
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno"><a class="line" href="class_text_u_i_1_1_output_1_1_table.html#aee3614c99a34639c6a85c17dba038113">  304</a></span>    <span class="keyword">protected</span> <span class="keyword">function</span> <a class="code hl_function" href="class_text_u_i_1_1_output_1_1_table.html#aee3614c99a34639c6a85c17dba038113">splitCells</a>(array <a class="code hl_variable" href="class_text_u_i_1_1_output_1_1_table.html#afdee872084b9ad2e9f2b7d04c1214679">$data</a>, array $colsLen): array</div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>    {</div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>        $dataSplitted = [];</div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>        <span class="keywordflow">foreach</span> (<a class="code hl_variable" href="class_text_u_i_1_1_output_1_1_table.html#afdee872084b9ad2e9f2b7d04c1214679">$data</a> as $rowIndex =&gt; $row) {</div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>            $colCounter = 0;</div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>            <span class="keywordflow">foreach</span> ($row as $colIndex =&gt; $cell) {</div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>                $len = ($colsLen[$colCounter] - 4);</div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>                <span class="keywordflow">if</span> ($len &lt; 1) {</div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>                    <span class="keywordflow">throw</span> <span class="keyword">new</span> InvalidArgumentException(<span class="stringliteral">&#39;Width of column not less than 0.&#39;</span>);</div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>                }</div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>                settype($cell, <span class="stringliteral">&#39;string&#39;</span>);</div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>                $dataSplitted [$rowIndex][$colIndex] = <a class="code hl_function" href="class_text_u_i_1_1_utils.html#a35530d517765736b53e5380fbb3e1412">Utils::strToParagraph</a>($cell, $len);</div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>                $colCounter++;</div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>            }</div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>        }</div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>        <span class="keywordflow">return</span> $dataSplitted;</div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>    }</div>
 </div>
-<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span> </div>
-<div class="foldopen" id="foldopen00326" data-start="{" data-end="}">
-<div class="line"><a id="l00326" name="l00326"></a><span class="lineno"><a class="line" href="class_text_u_i_1_1_output_1_1_table.html#a63b964dc8287e28bf40914d7fe3299b9">  326</a></span>    <span class="keyword">protected</span> <span class="keyword">function</span> <a class="code hl_function" href="class_text_u_i_1_1_output_1_1_table.html#a63b964dc8287e28bf40914d7fe3299b9">buildBodyHorizontalSeparatorStr</a>(array $colsLen): string</div>
-<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>    {</div>
-<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>        $str = <a class="code hl_variable" href="class_text_u_i_1_1_output_1_1_table.html#af95e373def7749f5f40659b063da46e6">$this-&gt;intersectionChar</a>;</div>
-<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>        <span class="keywordflow">foreach</span> ($colsLen as <a class="code hl_variable" href="class_text_u_i_1_1_output_1_1_table.html#a43c3698a23db3b8ed5c98d85156c8af9">$width</a>) {</div>
-<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>            $str .= str_repeat($this-&gt;simpleHorizontalBorderChar, (<a class="code hl_variable" href="class_text_u_i_1_1_output_1_1_table.html#a43c3698a23db3b8ed5c98d85156c8af9">$width</a> - 2));</div>
-<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>            $str .= <a class="code hl_variable" href="class_text_u_i_1_1_output_1_1_table.html#af95e373def7749f5f40659b063da46e6">$this-&gt;intersectionChar</a>;</div>
-<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>        }</div>
-<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>        <span class="keywordflow">return</span> $str . PHP_EOL;</div>
-<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>    }</div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span> </div>
+<div class="foldopen" id="foldopen00327" data-start="{" data-end="}">
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno"><a class="line" href="class_text_u_i_1_1_output_1_1_table.html#a63b964dc8287e28bf40914d7fe3299b9">  327</a></span>    <span class="keyword">protected</span> <span class="keyword">function</span> <a class="code hl_function" href="class_text_u_i_1_1_output_1_1_table.html#a63b964dc8287e28bf40914d7fe3299b9">buildBodyHorizontalSeparatorStr</a>(array $colsLen): string</div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>    {</div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>        $str = <a class="code hl_variable" href="class_text_u_i_1_1_output_1_1_table.html#af95e373def7749f5f40659b063da46e6">$this-&gt;intersectionChar</a>;</div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>        <span class="keywordflow">foreach</span> ($colsLen as <a class="code hl_variable" href="class_text_u_i_1_1_output_1_1_table.html#a43c3698a23db3b8ed5c98d85156c8af9">$width</a>) {</div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>            $str .= str_repeat($this-&gt;simpleHorizontalBorderChar, (<a class="code hl_variable" href="class_text_u_i_1_1_output_1_1_table.html#a43c3698a23db3b8ed5c98d85156c8af9">$width</a> - 2));</div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>            $str .= <a class="code hl_variable" href="class_text_u_i_1_1_output_1_1_table.html#af95e373def7749f5f40659b063da46e6">$this-&gt;intersectionChar</a>;</div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>        }</div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>        <span class="keywordflow">return</span> $str . PHP_EOL;</div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>    }</div>
 </div>
-<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span> </div>
-<div class="foldopen" id="foldopen00341" data-start="{" data-end="}">
-<div class="line"><a id="l00341" name="l00341"></a><span class="lineno"><a class="line" href="class_text_u_i_1_1_output_1_1_table.html#aed528cbb6573b19f79fe5561b1114652">  341</a></span>    <span class="keyword">protected</span> <span class="keyword">function</span> <a class="code hl_function" href="class_text_u_i_1_1_output_1_1_table.html#aed528cbb6573b19f79fe5561b1114652">buildHeaderHorizontalSeparatorStr</a>(array $colsLen): string</div>
-<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>    {</div>
-<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>        $str = <a class="code hl_variable" href="class_text_u_i_1_1_output_1_1_table.html#af95e373def7749f5f40659b063da46e6">$this-&gt;intersectionChar</a>;</div>
-<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>        <span class="keywordflow">foreach</span> ($colsLen as <a class="code hl_variable" href="class_text_u_i_1_1_output_1_1_table.html#a43c3698a23db3b8ed5c98d85156c8af9">$width</a>) {</div>
-<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>            $str .= str_repeat($this-&gt;specialHorizontalBorderChar, (<a class="code hl_variable" href="class_text_u_i_1_1_output_1_1_table.html#a43c3698a23db3b8ed5c98d85156c8af9">$width</a> - 2));</div>
-<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>            $str .= <a class="code hl_variable" href="class_text_u_i_1_1_output_1_1_table.html#af95e373def7749f5f40659b063da46e6">$this-&gt;intersectionChar</a>;</div>
-<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>        }</div>
-<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>        <span class="keywordflow">return</span> $str . PHP_EOL;</div>
-<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>    }</div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span> </div>
+<div class="foldopen" id="foldopen00342" data-start="{" data-end="}">
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno"><a class="line" href="class_text_u_i_1_1_output_1_1_table.html#aed528cbb6573b19f79fe5561b1114652">  342</a></span>    <span class="keyword">protected</span> <span class="keyword">function</span> <a class="code hl_function" href="class_text_u_i_1_1_output_1_1_table.html#aed528cbb6573b19f79fe5561b1114652">buildHeaderHorizontalSeparatorStr</a>(array $colsLen): string</div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>    {</div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>        $str = <a class="code hl_variable" href="class_text_u_i_1_1_output_1_1_table.html#af95e373def7749f5f40659b063da46e6">$this-&gt;intersectionChar</a>;</div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>        <span class="keywordflow">foreach</span> ($colsLen as <a class="code hl_variable" href="class_text_u_i_1_1_output_1_1_table.html#a43c3698a23db3b8ed5c98d85156c8af9">$width</a>) {</div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>            $str .= str_repeat($this-&gt;specialHorizontalBorderChar, (<a class="code hl_variable" href="class_text_u_i_1_1_output_1_1_table.html#a43c3698a23db3b8ed5c98d85156c8af9">$width</a> - 2));</div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>            $str .= <a class="code hl_variable" href="class_text_u_i_1_1_output_1_1_table.html#af95e373def7749f5f40659b063da46e6">$this-&gt;intersectionChar</a>;</div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>        }</div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>        <span class="keywordflow">return</span> $str . PHP_EOL;</div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>    }</div>
 </div>
-<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span> </div>
-<div class="foldopen" id="foldopen00357" data-start="{" data-end="}">
-<div class="line"><a id="l00357" name="l00357"></a><span class="lineno"><a class="line" href="class_text_u_i_1_1_output_1_1_table.html#a321efc5f2e438baefcdbd5fe67914823">  357</a></span>    <span class="keyword">protected</span> <span class="keyword">function</span> <a class="code hl_function" href="class_text_u_i_1_1_output_1_1_table.html#a321efc5f2e438baefcdbd5fe67914823">calcColsLen</a>(array <a class="code hl_variable" href="class_text_u_i_1_1_output_1_1_table.html#afdee872084b9ad2e9f2b7d04c1214679">$data</a>, array <a class="code hl_variable" href="class_text_u_i_1_1_output_1_1_table.html#a43c3698a23db3b8ed5c98d85156c8af9">$width</a> = []): array</div>
-<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>    {</div>
-<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_text_u_i_1_1_output_1_1_table.html#a43c3698a23db3b8ed5c98d85156c8af9">$width</a> === []) {</div>
-<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>            <span class="keywordflow">return</span> $this-&gt;<a class="code hl_function" href="class_text_u_i_1_1_output_1_1_table.html#a9bdb922ba1bb35667cbd53bc22295c43">calcColsLenFromData</a>($data);</div>
-<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>        }</div>
-<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span>        <span class="keywordflow">return</span> $this-&gt;<a class="code hl_function" href="class_text_u_i_1_1_output_1_1_table.html#afe0ec51c8b5286f40b537df0c4e96b20">calcColsLenFromWidth</a>($width);</div>
-<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>    }</div>
+<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span> </div>
+<div class="foldopen" id="foldopen00358" data-start="{" data-end="}">
+<div class="line"><a id="l00358" name="l00358"></a><span class="lineno"><a class="line" href="class_text_u_i_1_1_output_1_1_table.html#a321efc5f2e438baefcdbd5fe67914823">  358</a></span>    <span class="keyword">protected</span> <span class="keyword">function</span> <a class="code hl_function" href="class_text_u_i_1_1_output_1_1_table.html#a321efc5f2e438baefcdbd5fe67914823">calcColsLen</a>(array <a class="code hl_variable" href="class_text_u_i_1_1_output_1_1_table.html#afdee872084b9ad2e9f2b7d04c1214679">$data</a>, array <a class="code hl_variable" href="class_text_u_i_1_1_output_1_1_table.html#a43c3698a23db3b8ed5c98d85156c8af9">$width</a> = []): array</div>
+<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>    {</div>
+<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_text_u_i_1_1_output_1_1_table.html#a43c3698a23db3b8ed5c98d85156c8af9">$width</a> === []) {</div>
+<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>            <span class="keywordflow">return</span> $this-&gt;<a class="code hl_function" href="class_text_u_i_1_1_output_1_1_table.html#a9bdb922ba1bb35667cbd53bc22295c43">calcColsLenFromData</a>($data);</div>
+<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span>        }</div>
+<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>        <span class="keywordflow">return</span> $this-&gt;<a class="code hl_function" href="class_text_u_i_1_1_output_1_1_table.html#afe0ec51c8b5286f40b537df0c4e96b20">calcColsLenFromWidth</a>($width);</div>
+<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>    }</div>
 </div>
-<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span> </div>
-<div class="foldopen" id="foldopen00371" data-start="{" data-end="}">
-<div class="line"><a id="l00371" name="l00371"></a><span class="lineno"><a class="line" href="class_text_u_i_1_1_output_1_1_table.html#a9bdb922ba1bb35667cbd53bc22295c43">  371</a></span>    <span class="keyword">protected</span> <span class="keyword">function</span> <a class="code hl_function" href="class_text_u_i_1_1_output_1_1_table.html#a9bdb922ba1bb35667cbd53bc22295c43">calcColsLenFromData</a>(array <a class="code hl_variable" href="class_text_u_i_1_1_output_1_1_table.html#afdee872084b9ad2e9f2b7d04c1214679">$data</a>): array</div>
-<div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span>    {</div>
-<div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span>        $cols = <a class="code hl_function" href="class_text_u_i_1_1_utils.html#ac0459c25f792d08c1042d633869e89e0">Utils::detectScreenColumns</a>();</div>
-<div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span>        $numCols = count((array) <a class="code hl_variable" href="class_text_u_i_1_1_output_1_1_table.html#afdee872084b9ad2e9f2b7d04c1214679">$data</a>[array_key_first(<a class="code hl_variable" href="class_text_u_i_1_1_output_1_1_table.html#afdee872084b9ad2e9f2b7d04c1214679">$data</a>)]);</div>
-<div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span>        <a class="code hl_variable" href="class_text_u_i_1_1_output_1_1_table.html#a43c3698a23db3b8ed5c98d85156c8af9">$width</a> = floor($cols / $numCols);</div>
-<div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span>        <span class="keywordflow">return</span> array_fill(0, $numCols, (<span class="keywordtype">int</span>) <a class="code hl_variable" href="class_text_u_i_1_1_output_1_1_table.html#a43c3698a23db3b8ed5c98d85156c8af9">$width</a>);</div>
-<div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span>    }</div>
+<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span> </div>
+<div class="foldopen" id="foldopen00372" data-start="{" data-end="}">
+<div class="line"><a id="l00372" name="l00372"></a><span class="lineno"><a class="line" href="class_text_u_i_1_1_output_1_1_table.html#a9bdb922ba1bb35667cbd53bc22295c43">  372</a></span>    <span class="keyword">protected</span> <span class="keyword">function</span> <a class="code hl_function" href="class_text_u_i_1_1_output_1_1_table.html#a9bdb922ba1bb35667cbd53bc22295c43">calcColsLenFromData</a>(array <a class="code hl_variable" href="class_text_u_i_1_1_output_1_1_table.html#afdee872084b9ad2e9f2b7d04c1214679">$data</a>): array</div>
+<div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span>    {</div>
+<div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span>        $cols = <a class="code hl_function" href="class_text_u_i_1_1_utils.html#ac0459c25f792d08c1042d633869e89e0">Utils::detectScreenColumns</a>();</div>
+<div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span>        $numCols = count((array) <a class="code hl_variable" href="class_text_u_i_1_1_output_1_1_table.html#afdee872084b9ad2e9f2b7d04c1214679">$data</a>[array_key_first(<a class="code hl_variable" href="class_text_u_i_1_1_output_1_1_table.html#afdee872084b9ad2e9f2b7d04c1214679">$data</a>)]);</div>
+<div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span>        <a class="code hl_variable" href="class_text_u_i_1_1_output_1_1_table.html#a43c3698a23db3b8ed5c98d85156c8af9">$width</a> = floor($cols / $numCols);</div>
+<div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span>        <span class="keywordflow">return</span> array_fill(0, $numCols, (<span class="keywordtype">int</span>) <a class="code hl_variable" href="class_text_u_i_1_1_output_1_1_table.html#a43c3698a23db3b8ed5c98d85156c8af9">$width</a>);</div>
+<div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span>    }</div>
 </div>
-<div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span> </div>
-<div class="foldopen" id="foldopen00385" data-start="{" data-end="}">
-<div class="line"><a id="l00385" name="l00385"></a><span class="lineno"><a class="line" href="class_text_u_i_1_1_output_1_1_table.html#afe0ec51c8b5286f40b537df0c4e96b20">  385</a></span>    <span class="keyword">protected</span> <span class="keyword">function</span> <a class="code hl_function" href="class_text_u_i_1_1_output_1_1_table.html#afe0ec51c8b5286f40b537df0c4e96b20">calcColsLenFromWidth</a>(array <a class="code hl_variable" href="class_text_u_i_1_1_output_1_1_table.html#a43c3698a23db3b8ed5c98d85156c8af9">$width</a>): array</div>
-<div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span>    {</div>
-<div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span>        $lens = [];</div>
-<div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span>        $cols = <a class="code hl_function" href="class_text_u_i_1_1_utils.html#ac0459c25f792d08c1042d633869e89e0">Utils::detectScreenColumns</a>();</div>
-<div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span>        $totalLen = array_sum(<a class="code hl_variable" href="class_text_u_i_1_1_output_1_1_table.html#a43c3698a23db3b8ed5c98d85156c8af9">$width</a>);</div>
-<div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span>        $sum = 0;</div>
-<div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span>        <span class="keywordflow">foreach</span> (<a class="code hl_variable" href="class_text_u_i_1_1_output_1_1_table.html#a43c3698a23db3b8ed5c98d85156c8af9">$width</a> as $len) {</div>
-<div class="line"><a id="l00392" name="l00392"></a><span class="lineno">  392</span>            $perc = $len / $totalLen;</div>
-<div class="line"><a id="l00393" name="l00393"></a><span class="lineno">  393</span>            $size = (int) floor($cols * $perc);</div>
-<div class="line"><a id="l00394" name="l00394"></a><span class="lineno">  394</span>            $sum += $size;</div>
-<div class="line"><a id="l00395" name="l00395"></a><span class="lineno">  395</span>            <span class="keywordflow">if</span> ($sum &lt;= $cols) {</div>
-<div class="line"><a id="l00396" name="l00396"></a><span class="lineno">  396</span>                $lens[] = $size;</div>
-<div class="line"><a id="l00397" name="l00397"></a><span class="lineno">  397</span>                <span class="keywordflow">continue</span>;</div>
-<div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span>            }</div>
-<div class="line"><a id="l00399" name="l00399"></a><span class="lineno">  399</span>            $lens[] = $cols - ($sum - $size);</div>
-<div class="line"><a id="l00400" name="l00400"></a><span class="lineno">  400</span>        }</div>
-<div class="line"><a id="l00401" name="l00401"></a><span class="lineno">  401</span>        <span class="keywordflow">return</span> $lens;</div>
-<div class="line"><a id="l00402" name="l00402"></a><span class="lineno">  402</span>    }</div>
+<div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span> </div>
+<div class="foldopen" id="foldopen00386" data-start="{" data-end="}">
+<div class="line"><a id="l00386" name="l00386"></a><span class="lineno"><a class="line" href="class_text_u_i_1_1_output_1_1_table.html#afe0ec51c8b5286f40b537df0c4e96b20">  386</a></span>    <span class="keyword">protected</span> <span class="keyword">function</span> <a class="code hl_function" href="class_text_u_i_1_1_output_1_1_table.html#afe0ec51c8b5286f40b537df0c4e96b20">calcColsLenFromWidth</a>(array <a class="code hl_variable" href="class_text_u_i_1_1_output_1_1_table.html#a43c3698a23db3b8ed5c98d85156c8af9">$width</a>): array</div>
+<div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span>    {</div>
+<div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span>        $lens = [];</div>
+<div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span>        $cols = <a class="code hl_function" href="class_text_u_i_1_1_utils.html#ac0459c25f792d08c1042d633869e89e0">Utils::detectScreenColumns</a>();</div>
+<div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span>        $totalLen = array_sum(<a class="code hl_variable" href="class_text_u_i_1_1_output_1_1_table.html#a43c3698a23db3b8ed5c98d85156c8af9">$width</a>);</div>
+<div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span>        $sum = 0;</div>
+<div class="line"><a id="l00392" name="l00392"></a><span class="lineno">  392</span>        <span class="keywordflow">foreach</span> (<a class="code hl_variable" href="class_text_u_i_1_1_output_1_1_table.html#a43c3698a23db3b8ed5c98d85156c8af9">$width</a> as $len) {</div>
+<div class="line"><a id="l00393" name="l00393"></a><span class="lineno">  393</span>            $perc = $len / $totalLen;</div>
+<div class="line"><a id="l00394" name="l00394"></a><span class="lineno">  394</span>            $size = (int) floor($cols * $perc);</div>
+<div class="line"><a id="l00395" name="l00395"></a><span class="lineno">  395</span>            $sum += $size;</div>
+<div class="line"><a id="l00396" name="l00396"></a><span class="lineno">  396</span>            <span class="keywordflow">if</span> ($sum &lt;= $cols) {</div>
+<div class="line"><a id="l00397" name="l00397"></a><span class="lineno">  397</span>                $lens[] = $size;</div>
+<div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00399" name="l00399"></a><span class="lineno">  399</span>            }</div>
+<div class="line"><a id="l00400" name="l00400"></a><span class="lineno">  400</span>            $lens[] = $cols - ($sum - $size);</div>
+<div class="line"><a id="l00401" name="l00401"></a><span class="lineno">  401</span>        }</div>
+<div class="line"><a id="l00402" name="l00402"></a><span class="lineno">  402</span>        <span class="keywordflow">return</span> $lens;</div>
+<div class="line"><a id="l00403" name="l00403"></a><span class="lineno">  403</span>    }</div>
 </div>
-<div class="line"><a id="l00403" name="l00403"></a><span class="lineno">  403</span> </div>
-<div class="foldopen" id="foldopen00411" data-start="{" data-end="}">
-<div class="line"><a id="l00411" name="l00411"></a><span class="lineno"><a class="line" href="class_text_u_i_1_1_output_1_1_table.html#a072a0f196baa5e8054096d481e20c818">  411</a></span>    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code hl_function" href="class_text_u_i_1_1_output_1_1_table.html#a072a0f196baa5e8054096d481e20c818">setIntersectionChar</a>(<span class="keywordtype">string</span> $char): <a class="code hl_class" href="class_text_u_i_1_1_output_1_1_table.html">Table</a></div>
-<div class="line"><a id="l00412" name="l00412"></a><span class="lineno">  412</span>    {</div>
-<div class="line"><a id="l00413" name="l00413"></a><span class="lineno">  413</span>        <span class="keywordflow">if</span> (strlen($char) !== 1) {</div>
-<div class="line"><a id="l00414" name="l00414"></a><span class="lineno">  414</span>            <span class="keywordflow">throw</span> <span class="keyword">new</span> InvalidArgumentException(<span class="stringliteral">&#39;$char must be length 1.&#39;</span>);</div>
-<div class="line"><a id="l00415" name="l00415"></a><span class="lineno">  415</span>        }</div>
-<div class="line"><a id="l00416" name="l00416"></a><span class="lineno">  416</span>        $this-&gt;intersectionChar = $char;</div>
-<div class="line"><a id="l00417" name="l00417"></a><span class="lineno">  417</span>        <span class="keywordflow">return</span> $this;</div>
-<div class="line"><a id="l00418" name="l00418"></a><span class="lineno">  418</span>    }</div>
+<div class="line"><a id="l00404" name="l00404"></a><span class="lineno">  404</span> </div>
+<div class="foldopen" id="foldopen00412" data-start="{" data-end="}">
+<div class="line"><a id="l00412" name="l00412"></a><span class="lineno"><a class="line" href="class_text_u_i_1_1_output_1_1_table.html#a072a0f196baa5e8054096d481e20c818">  412</a></span>    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code hl_function" href="class_text_u_i_1_1_output_1_1_table.html#a072a0f196baa5e8054096d481e20c818">setIntersectionChar</a>(<span class="keywordtype">string</span> $char): <a class="code hl_class" href="class_text_u_i_1_1_output_1_1_table.html">Table</a></div>
+<div class="line"><a id="l00413" name="l00413"></a><span class="lineno">  413</span>    {</div>
+<div class="line"><a id="l00414" name="l00414"></a><span class="lineno">  414</span>        <span class="keywordflow">if</span> (strlen($char) !== 1) {</div>
+<div class="line"><a id="l00415" name="l00415"></a><span class="lineno">  415</span>            <span class="keywordflow">throw</span> <span class="keyword">new</span> InvalidArgumentException(<span class="stringliteral">&#39;$char must be length 1.&#39;</span>);</div>
+<div class="line"><a id="l00416" name="l00416"></a><span class="lineno">  416</span>        }</div>
+<div class="line"><a id="l00417" name="l00417"></a><span class="lineno">  417</span>        $this-&gt;intersectionChar = $char;</div>
+<div class="line"><a id="l00418" name="l00418"></a><span class="lineno">  418</span>        <span class="keywordflow">return</span> $this;</div>
+<div class="line"><a id="l00419" name="l00419"></a><span class="lineno">  419</span>    }</div>
 </div>
-<div class="line"><a id="l00419" name="l00419"></a><span class="lineno">  419</span> </div>
-<div class="foldopen" id="foldopen00428" data-start="{" data-end="}">
-<div class="line"><a id="l00428" name="l00428"></a><span class="lineno"><a class="line" href="class_text_u_i_1_1_output_1_1_table.html#a685d401d697fa82dd8c5ba0f656943cb">  428</a></span>    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code hl_function" href="class_text_u_i_1_1_output_1_1_table.html#a685d401d697fa82dd8c5ba0f656943cb">setSimpleHorizontalBorderChar</a>(<span class="keywordtype">string</span> $char): <a class="code hl_class" href="class_text_u_i_1_1_output_1_1_table.html">Table</a></div>
-<div class="line"><a id="l00429" name="l00429"></a><span class="lineno">  429</span>    {</div>
-<div class="line"><a id="l00430" name="l00430"></a><span class="lineno">  430</span>        <span class="keywordflow">if</span> (strlen($char) !== 1) {</div>
-<div class="line"><a id="l00431" name="l00431"></a><span class="lineno">  431</span>            <span class="keywordflow">throw</span> <span class="keyword">new</span> InvalidArgumentException(<span class="stringliteral">&#39;$char must be length 1.&#39;</span>);</div>
-<div class="line"><a id="l00432" name="l00432"></a><span class="lineno">  432</span>        }</div>
-<div class="line"><a id="l00433" name="l00433"></a><span class="lineno">  433</span>        $this-&gt;simpleHorizontalBorderChar = $char;</div>
-<div class="line"><a id="l00434" name="l00434"></a><span class="lineno">  434</span>        <span class="keywordflow">return</span> $this;</div>
-<div class="line"><a id="l00435" name="l00435"></a><span class="lineno">  435</span>    }</div>
+<div class="line"><a id="l00420" name="l00420"></a><span class="lineno">  420</span> </div>
+<div class="foldopen" id="foldopen00429" data-start="{" data-end="}">
+<div class="line"><a id="l00429" name="l00429"></a><span class="lineno"><a class="line" href="class_text_u_i_1_1_output_1_1_table.html#a685d401d697fa82dd8c5ba0f656943cb">  429</a></span>    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code hl_function" href="class_text_u_i_1_1_output_1_1_table.html#a685d401d697fa82dd8c5ba0f656943cb">setSimpleHorizontalBorderChar</a>(<span class="keywordtype">string</span> $char): <a class="code hl_class" href="class_text_u_i_1_1_output_1_1_table.html">Table</a></div>
+<div class="line"><a id="l00430" name="l00430"></a><span class="lineno">  430</span>    {</div>
+<div class="line"><a id="l00431" name="l00431"></a><span class="lineno">  431</span>        <span class="keywordflow">if</span> (strlen($char) !== 1) {</div>
+<div class="line"><a id="l00432" name="l00432"></a><span class="lineno">  432</span>            <span class="keywordflow">throw</span> <span class="keyword">new</span> InvalidArgumentException(<span class="stringliteral">&#39;$char must be length 1.&#39;</span>);</div>
+<div class="line"><a id="l00433" name="l00433"></a><span class="lineno">  433</span>        }</div>
+<div class="line"><a id="l00434" name="l00434"></a><span class="lineno">  434</span>        $this-&gt;simpleHorizontalBorderChar = $char;</div>
+<div class="line"><a id="l00435" name="l00435"></a><span class="lineno">  435</span>        <span class="keywordflow">return</span> $this;</div>
+<div class="line"><a id="l00436" name="l00436"></a><span class="lineno">  436</span>    }</div>
 </div>
-<div class="line"><a id="l00436" name="l00436"></a><span class="lineno">  436</span> </div>
-<div class="foldopen" id="foldopen00444" data-start="{" data-end="}">
-<div class="line"><a id="l00444" name="l00444"></a><span class="lineno"><a class="line" href="class_text_u_i_1_1_output_1_1_table.html#ac930ee5b0530bcad6f9fd0caa4caf4a0">  444</a></span>    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code hl_function" href="class_text_u_i_1_1_output_1_1_table.html#ac930ee5b0530bcad6f9fd0caa4caf4a0">setSimpleVerticalBorderChar</a>(<span class="keywordtype">string</span> $char): <a class="code hl_class" href="class_text_u_i_1_1_output_1_1_table.html">Table</a></div>
-<div class="line"><a id="l00445" name="l00445"></a><span class="lineno">  445</span>    {</div>
-<div class="line"><a id="l00446" name="l00446"></a><span class="lineno">  446</span>        <span class="keywordflow">if</span> (strlen($char) !== 1) {</div>
-<div class="line"><a id="l00447" name="l00447"></a><span class="lineno">  447</span>            <span class="keywordflow">throw</span> <span class="keyword">new</span> InvalidArgumentException(<span class="stringliteral">&#39;$char must be length 1.&#39;</span>);</div>
-<div class="line"><a id="l00448" name="l00448"></a><span class="lineno">  448</span>        }</div>
-<div class="line"><a id="l00449" name="l00449"></a><span class="lineno">  449</span>        $this-&gt;verticalBorderChar = $char;</div>
-<div class="line"><a id="l00450" name="l00450"></a><span class="lineno">  450</span>        <span class="keywordflow">return</span> $this;</div>
-<div class="line"><a id="l00451" name="l00451"></a><span class="lineno">  451</span>    }</div>
+<div class="line"><a id="l00437" name="l00437"></a><span class="lineno">  437</span> </div>
+<div class="foldopen" id="foldopen00445" data-start="{" data-end="}">
+<div class="line"><a id="l00445" name="l00445"></a><span class="lineno"><a class="line" href="class_text_u_i_1_1_output_1_1_table.html#ac930ee5b0530bcad6f9fd0caa4caf4a0">  445</a></span>    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code hl_function" href="class_text_u_i_1_1_output_1_1_table.html#ac930ee5b0530bcad6f9fd0caa4caf4a0">setSimpleVerticalBorderChar</a>(<span class="keywordtype">string</span> $char): <a class="code hl_class" href="class_text_u_i_1_1_output_1_1_table.html">Table</a></div>
+<div class="line"><a id="l00446" name="l00446"></a><span class="lineno">  446</span>    {</div>
+<div class="line"><a id="l00447" name="l00447"></a><span class="lineno">  447</span>        <span class="keywordflow">if</span> (strlen($char) !== 1) {</div>
+<div class="line"><a id="l00448" name="l00448"></a><span class="lineno">  448</span>            <span class="keywordflow">throw</span> <span class="keyword">new</span> InvalidArgumentException(<span class="stringliteral">&#39;$char must be length 1.&#39;</span>);</div>
+<div class="line"><a id="l00449" name="l00449"></a><span class="lineno">  449</span>        }</div>
+<div class="line"><a id="l00450" name="l00450"></a><span class="lineno">  450</span>        $this-&gt;verticalBorderChar = $char;</div>
+<div class="line"><a id="l00451" name="l00451"></a><span class="lineno">  451</span>        <span class="keywordflow">return</span> $this;</div>
+<div class="line"><a id="l00452" name="l00452"></a><span class="lineno">  452</span>    }</div>
 </div>
-<div class="line"><a id="l00452" name="l00452"></a><span class="lineno">  452</span> </div>
-<div class="foldopen" id="foldopen00461" data-start="{" data-end="}">
-<div class="line"><a id="l00461" name="l00461"></a><span class="lineno"><a class="line" href="class_text_u_i_1_1_output_1_1_table.html#ad6f3fd0ed4e8d54cd1fcf8b2f10dda8d">  461</a></span>    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code hl_function" href="class_text_u_i_1_1_output_1_1_table.html#ad6f3fd0ed4e8d54cd1fcf8b2f10dda8d">setSpecialHorizontalBorderChar</a>(<span class="keywordtype">string</span> $char): <a class="code hl_class" href="class_text_u_i_1_1_output_1_1_table.html">Table</a></div>
-<div class="line"><a id="l00462" name="l00462"></a><span class="lineno">  462</span>    {</div>
-<div class="line"><a id="l00463" name="l00463"></a><span class="lineno">  463</span>        <span class="keywordflow">if</span> (strlen($char) !== 1) {</div>
-<div class="line"><a id="l00464" name="l00464"></a><span class="lineno">  464</span>            <span class="keywordflow">throw</span> <span class="keyword">new</span> InvalidArgumentException(<span class="stringliteral">&#39;$char must be length 1.&#39;</span>);</div>
-<div class="line"><a id="l00465" name="l00465"></a><span class="lineno">  465</span>        }</div>
-<div class="line"><a id="l00466" name="l00466"></a><span class="lineno">  466</span>        $this-&gt;specialHorizontalBorderChar = $char;</div>
-<div class="line"><a id="l00467" name="l00467"></a><span class="lineno">  467</span>        <span class="keywordflow">return</span> $this;</div>
-<div class="line"><a id="l00468" name="l00468"></a><span class="lineno">  468</span>    }</div>
+<div class="line"><a id="l00453" name="l00453"></a><span class="lineno">  453</span> </div>
+<div class="foldopen" id="foldopen00462" data-start="{" data-end="}">
+<div class="line"><a id="l00462" name="l00462"></a><span class="lineno"><a class="line" href="class_text_u_i_1_1_output_1_1_table.html#ad6f3fd0ed4e8d54cd1fcf8b2f10dda8d">  462</a></span>    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code hl_function" href="class_text_u_i_1_1_output_1_1_table.html#ad6f3fd0ed4e8d54cd1fcf8b2f10dda8d">setSpecialHorizontalBorderChar</a>(<span class="keywordtype">string</span> $char): <a class="code hl_class" href="class_text_u_i_1_1_output_1_1_table.html">Table</a></div>
+<div class="line"><a id="l00463" name="l00463"></a><span class="lineno">  463</span>    {</div>
+<div class="line"><a id="l00464" name="l00464"></a><span class="lineno">  464</span>        <span class="keywordflow">if</span> (strlen($char) !== 1) {</div>
+<div class="line"><a id="l00465" name="l00465"></a><span class="lineno">  465</span>            <span class="keywordflow">throw</span> <span class="keyword">new</span> InvalidArgumentException(<span class="stringliteral">&#39;$char must be length 1.&#39;</span>);</div>
+<div class="line"><a id="l00466" name="l00466"></a><span class="lineno">  466</span>        }</div>
+<div class="line"><a id="l00467" name="l00467"></a><span class="lineno">  467</span>        $this-&gt;specialHorizontalBorderChar = $char;</div>
+<div class="line"><a id="l00468" name="l00468"></a><span class="lineno">  468</span>        <span class="keywordflow">return</span> $this;</div>
+<div class="line"><a id="l00469" name="l00469"></a><span class="lineno">  469</span>    }</div>
 </div>
-<div class="line"><a id="l00469" name="l00469"></a><span class="lineno">  469</span>}</div>
+<div class="line"><a id="l00470" name="l00470"></a><span class="lineno">  470</span>}</div>
 </div>
 <div class="ttc" id="aclass_text_u_i_1_1_output_1_1_table_html"><div class="ttname"><a href="class_text_u_i_1_1_output_1_1_table.html">TextUI\Output\Table</a></div><div class="ttdef"><b>Definition</b> <a href="#l00018">Table.php:19</a></div></div>
-<div class="ttc" id="aclass_text_u_i_1_1_output_1_1_table_html_a072a0f196baa5e8054096d481e20c818"><div class="ttname"><a href="class_text_u_i_1_1_output_1_1_table.html#a072a0f196baa5e8054096d481e20c818">TextUI\Output\Table\setIntersectionChar</a></div><div class="ttdeci">setIntersectionChar(string $char)</div><div class="ttdef"><b>Definition</b> <a href="#l00411">Table.php:411</a></div></div>
+<div class="ttc" id="aclass_text_u_i_1_1_output_1_1_table_html_a072a0f196baa5e8054096d481e20c818"><div class="ttname"><a href="class_text_u_i_1_1_output_1_1_table.html#a072a0f196baa5e8054096d481e20c818">TextUI\Output\Table\setIntersectionChar</a></div><div class="ttdeci">setIntersectionChar(string $char)</div><div class="ttdef"><b>Definition</b> <a href="#l00412">Table.php:412</a></div></div>
 <div class="ttc" id="aclass_text_u_i_1_1_output_1_1_table_html_a1ba9d8ba70f827a58b9d1dddac516505"><div class="ttname"><a href="class_text_u_i_1_1_output_1_1_table.html#a1ba9d8ba70f827a58b9d1dddac516505">TextUI\Output\Table\$simpleHorizontalBorderChar</a></div><div class="ttdeci">string $simpleHorizontalBorderChar</div><div class="ttdef"><b>Definition</b> <a href="#l00021">Table.php:21</a></div></div>
-<div class="ttc" id="aclass_text_u_i_1_1_output_1_1_table_html_a1f9b51a2ca4e982ef4cbfb06f46b569b"><div class="ttname"><a href="class_text_u_i_1_1_output_1_1_table.html#a1f9b51a2ca4e982ef4cbfb06f46b569b">TextUI\Output\Table\buildBodyStr</a></div><div class="ttdeci">buildBodyStr(array $bodyData, array $colsLen, array $align)</div><div class="ttdef"><b>Definition</b> <a href="#l00220">Table.php:220</a></div></div>
-<div class="ttc" id="aclass_text_u_i_1_1_output_1_1_table_html_a2258657ff1d23be0f2433ab7c93a457f"><div class="ttname"><a href="class_text_u_i_1_1_output_1_1_table.html#a2258657ff1d23be0f2433ab7c93a457f">TextUI\Output\Table\getAlign</a></div><div class="ttdeci">getAlign(int $colIndex, array $align)</div><div class="ttdef"><b>Definition</b> <a href="#l00262">Table.php:262</a></div></div>
-<div class="ttc" id="aclass_text_u_i_1_1_output_1_1_table_html_a25b1c0552d032bb4110975fc3d350b47"><div class="ttname"><a href="class_text_u_i_1_1_output_1_1_table.html#a25b1c0552d032bb4110975fc3d350b47">TextUI\Output\Table\calcMaxParagraphByRow</a></div><div class="ttdeci">calcMaxParagraphByRow(array $row)</div><div class="ttdef"><b>Definition</b> <a href="#l00284">Table.php:284</a></div></div>
+<div class="ttc" id="aclass_text_u_i_1_1_output_1_1_table_html_a1f9b51a2ca4e982ef4cbfb06f46b569b"><div class="ttname"><a href="class_text_u_i_1_1_output_1_1_table.html#a1f9b51a2ca4e982ef4cbfb06f46b569b">TextUI\Output\Table\buildBodyStr</a></div><div class="ttdeci">buildBodyStr(array $bodyData, array $colsLen, array $align)</div><div class="ttdef"><b>Definition</b> <a href="#l00221">Table.php:221</a></div></div>
+<div class="ttc" id="aclass_text_u_i_1_1_output_1_1_table_html_a2258657ff1d23be0f2433ab7c93a457f"><div class="ttname"><a href="class_text_u_i_1_1_output_1_1_table.html#a2258657ff1d23be0f2433ab7c93a457f">TextUI\Output\Table\getAlign</a></div><div class="ttdeci">getAlign(int $colIndex, array $align)</div><div class="ttdef"><b>Definition</b> <a href="#l00263">Table.php:263</a></div></div>
+<div class="ttc" id="aclass_text_u_i_1_1_output_1_1_table_html_a25b1c0552d032bb4110975fc3d350b47"><div class="ttname"><a href="class_text_u_i_1_1_output_1_1_table.html#a25b1c0552d032bb4110975fc3d350b47">TextUI\Output\Table\calcMaxParagraphByRow</a></div><div class="ttdeci">calcMaxParagraphByRow(array $row)</div><div class="ttdef"><b>Definition</b> <a href="#l00285">Table.php:285</a></div></div>
 <div class="ttc" id="aclass_text_u_i_1_1_output_1_1_table_html_a2ce3916818386ecdb4f253828a19bbf6"><div class="ttname"><a href="class_text_u_i_1_1_output_1_1_table.html#a2ce3916818386ecdb4f253828a19bbf6">TextUI\Output\Table\draw</a></div><div class="ttdeci">draw()</div><div class="ttdef"><b>Definition</b> <a href="#l00066">Table.php:66</a></div></div>
-<div class="ttc" id="aclass_text_u_i_1_1_output_1_1_table_html_a321efc5f2e438baefcdbd5fe67914823"><div class="ttname"><a href="class_text_u_i_1_1_output_1_1_table.html#a321efc5f2e438baefcdbd5fe67914823">TextUI\Output\Table\calcColsLen</a></div><div class="ttdeci">calcColsLen(array $data, array $width=[])</div><div class="ttdef"><b>Definition</b> <a href="#l00357">Table.php:357</a></div></div>
+<div class="ttc" id="aclass_text_u_i_1_1_output_1_1_table_html_a321efc5f2e438baefcdbd5fe67914823"><div class="ttname"><a href="class_text_u_i_1_1_output_1_1_table.html#a321efc5f2e438baefcdbd5fe67914823">TextUI\Output\Table\calcColsLen</a></div><div class="ttdeci">calcColsLen(array $data, array $width=[])</div><div class="ttdef"><b>Definition</b> <a href="#l00358">Table.php:358</a></div></div>
 <div class="ttc" id="aclass_text_u_i_1_1_output_1_1_table_html_a33434ed051bf37305060069cfc051f73"><div class="ttname"><a href="class_text_u_i_1_1_output_1_1_table.html#a33434ed051bf37305060069cfc051f73">TextUI\Output\Table\$specialHorizontalBorderChar</a></div><div class="ttdeci">string $specialHorizontalBorderChar</div><div class="ttdef"><b>Definition</b> <a href="#l00023">Table.php:23</a></div></div>
 <div class="ttc" id="aclass_text_u_i_1_1_output_1_1_table_html_a3e017c9831316dd4458d1012cf4613c0"><div class="ttname"><a href="class_text_u_i_1_1_output_1_1_table.html#a3e017c9831316dd4458d1012cf4613c0">TextUI\Output\Table\setHeader</a></div><div class="ttdeci">setHeader(array $header)</div><div class="ttdef"><b>Definition</b> <a href="#l00087">Table.php:87</a></div></div>
 <div class="ttc" id="aclass_text_u_i_1_1_output_1_1_table_html_a40dc1ea6e2c54c1c25d4e5b45278a9fc"><div class="ttname"><a href="class_text_u_i_1_1_output_1_1_table.html#a40dc1ea6e2c54c1c25d4e5b45278a9fc">TextUI\Output\Table\$header</a></div><div class="ttdeci">array $header</div><div class="ttdef"><b>Definition</b> <a href="#l00033">Table.php:33</a></div></div>
 <div class="ttc" id="aclass_text_u_i_1_1_output_1_1_table_html_a43c3698a23db3b8ed5c98d85156c8af9"><div class="ttname"><a href="class_text_u_i_1_1_output_1_1_table.html#a43c3698a23db3b8ed5c98d85156c8af9">TextUI\Output\Table\$width</a></div><div class="ttdeci">array $width</div><div class="ttdef"><b>Definition</b> <a href="#l00043">Table.php:43</a></div></div>
-<div class="ttc" id="aclass_text_u_i_1_1_output_1_1_table_html_a63b964dc8287e28bf40914d7fe3299b9"><div class="ttname"><a href="class_text_u_i_1_1_output_1_1_table.html#a63b964dc8287e28bf40914d7fe3299b9">TextUI\Output\Table\buildBodyHorizontalSeparatorStr</a></div><div class="ttdeci">buildBodyHorizontalSeparatorStr(array $colsLen)</div><div class="ttdef"><b>Definition</b> <a href="#l00326">Table.php:326</a></div></div>
-<div class="ttc" id="aclass_text_u_i_1_1_output_1_1_table_html_a685d401d697fa82dd8c5ba0f656943cb"><div class="ttname"><a href="class_text_u_i_1_1_output_1_1_table.html#a685d401d697fa82dd8c5ba0f656943cb">TextUI\Output\Table\setSimpleHorizontalBorderChar</a></div><div class="ttdeci">setSimpleHorizontalBorderChar(string $char)</div><div class="ttdef"><b>Definition</b> <a href="#l00428">Table.php:428</a></div></div>
+<div class="ttc" id="aclass_text_u_i_1_1_output_1_1_table_html_a63b964dc8287e28bf40914d7fe3299b9"><div class="ttname"><a href="class_text_u_i_1_1_output_1_1_table.html#a63b964dc8287e28bf40914d7fe3299b9">TextUI\Output\Table\buildBodyHorizontalSeparatorStr</a></div><div class="ttdeci">buildBodyHorizontalSeparatorStr(array $colsLen)</div><div class="ttdef"><b>Definition</b> <a href="#l00327">Table.php:327</a></div></div>
+<div class="ttc" id="aclass_text_u_i_1_1_output_1_1_table_html_a685d401d697fa82dd8c5ba0f656943cb"><div class="ttname"><a href="class_text_u_i_1_1_output_1_1_table.html#a685d401d697fa82dd8c5ba0f656943cb">TextUI\Output\Table\setSimpleHorizontalBorderChar</a></div><div class="ttdeci">setSimpleHorizontalBorderChar(string $char)</div><div class="ttdef"><b>Definition</b> <a href="#l00429">Table.php:429</a></div></div>
 <div class="ttc" id="aclass_text_u_i_1_1_output_1_1_table_html_a6f76743cf9e3e6c5a557ae03460ea86b"><div class="ttname"><a href="class_text_u_i_1_1_output_1_1_table.html#a6f76743cf9e3e6c5a557ae03460ea86b">TextUI\Output\Table\$footer</a></div><div class="ttdeci">array $footer</div><div class="ttdef"><b>Definition</b> <a href="#l00038">Table.php:38</a></div></div>
-<div class="ttc" id="aclass_text_u_i_1_1_output_1_1_table_html_a8b2c118bfff1d3d425ffff1cc9165d90"><div class="ttname"><a href="class_text_u_i_1_1_output_1_1_table.html#a8b2c118bfff1d3d425ffff1cc9165d90">TextUI\Output\Table\buildHeaderStr</a></div><div class="ttdeci">buildHeaderStr(array $header, array $colsLen, array $align)</div><div class="ttdef"><b>Definition</b> <a href="#l00185">Table.php:185</a></div></div>
+<div class="ttc" id="aclass_text_u_i_1_1_output_1_1_table_html_a8b2c118bfff1d3d425ffff1cc9165d90"><div class="ttname"><a href="class_text_u_i_1_1_output_1_1_table.html#a8b2c118bfff1d3d425ffff1cc9165d90">TextUI\Output\Table\buildHeaderStr</a></div><div class="ttdeci">buildHeaderStr(array $header, array $colsLen, array $align)</div><div class="ttdef"><b>Definition</b> <a href="#l00186">Table.php:186</a></div></div>
 <div class="ttc" id="aclass_text_u_i_1_1_output_1_1_table_html_a958eba1d168fe0f53a0290e37364c0f1"><div class="ttname"><a href="class_text_u_i_1_1_output_1_1_table.html#a958eba1d168fe0f53a0290e37364c0f1">TextUI\Output\Table\setFooter</a></div><div class="ttdeci">setFooter(array $footer)</div><div class="ttdef"><b>Definition</b> <a href="#l00104">Table.php:104</a></div></div>
 <div class="ttc" id="aclass_text_u_i_1_1_output_1_1_table_html_a999d191b3096db52b721ddfc6f744a1f"><div class="ttname"><a href="class_text_u_i_1_1_output_1_1_table.html#a999d191b3096db52b721ddfc6f744a1f">TextUI\Output\Table\$align</a></div><div class="ttdeci">array $align</div><div class="ttdef"><b>Definition</b> <a href="#l00048">Table.php:48</a></div></div>
 <div class="ttc" id="aclass_text_u_i_1_1_output_1_1_table_html_a9b9ae50a3676cadd0b30c051d35df139"><div class="ttname"><a href="class_text_u_i_1_1_output_1_1_table.html#a9b9ae50a3676cadd0b30c051d35df139">TextUI\Output\Table\setColWidths</a></div><div class="ttdeci">setColWidths(array $widths)</div><div class="ttdef"><b>Definition</b> <a href="#l00124">Table.php:124</a></div></div>
-<div class="ttc" id="aclass_text_u_i_1_1_output_1_1_table_html_a9bdb922ba1bb35667cbd53bc22295c43"><div class="ttname"><a href="class_text_u_i_1_1_output_1_1_table.html#a9bdb922ba1bb35667cbd53bc22295c43">TextUI\Output\Table\calcColsLenFromData</a></div><div class="ttdeci">calcColsLenFromData(array $data)</div><div class="ttdef"><b>Definition</b> <a href="#l00371">Table.php:371</a></div></div>
-<div class="ttc" id="aclass_text_u_i_1_1_output_1_1_table_html_ac2cbc5aa1684a3b96a5bc13b8ccbd97d"><div class="ttname"><a href="class_text_u_i_1_1_output_1_1_table.html#ac2cbc5aa1684a3b96a5bc13b8ccbd97d">TextUI\Output\Table\setHorizontalAlignements</a></div><div class="ttdeci">setHorizontalAlignements(array $alignements)</div><div class="ttdef"><b>Definition</b> <a href="#l00144">Table.php:144</a></div></div>
-<div class="ttc" id="aclass_text_u_i_1_1_output_1_1_table_html_ac930ee5b0530bcad6f9fd0caa4caf4a0"><div class="ttname"><a href="class_text_u_i_1_1_output_1_1_table.html#ac930ee5b0530bcad6f9fd0caa4caf4a0">TextUI\Output\Table\setSimpleVerticalBorderChar</a></div><div class="ttdeci">setSimpleVerticalBorderChar(string $char)</div><div class="ttdef"><b>Definition</b> <a href="#l00444">Table.php:444</a></div></div>
-<div class="ttc" id="aclass_text_u_i_1_1_output_1_1_table_html_ad6f3fd0ed4e8d54cd1fcf8b2f10dda8d"><div class="ttname"><a href="class_text_u_i_1_1_output_1_1_table.html#ad6f3fd0ed4e8d54cd1fcf8b2f10dda8d">TextUI\Output\Table\setSpecialHorizontalBorderChar</a></div><div class="ttdeci">setSpecialHorizontalBorderChar(string $char)</div><div class="ttdef"><b>Definition</b> <a href="#l00461">Table.php:461</a></div></div>
+<div class="ttc" id="aclass_text_u_i_1_1_output_1_1_table_html_a9bdb922ba1bb35667cbd53bc22295c43"><div class="ttname"><a href="class_text_u_i_1_1_output_1_1_table.html#a9bdb922ba1bb35667cbd53bc22295c43">TextUI\Output\Table\calcColsLenFromData</a></div><div class="ttdeci">calcColsLenFromData(array $data)</div><div class="ttdef"><b>Definition</b> <a href="#l00372">Table.php:372</a></div></div>
+<div class="ttc" id="aclass_text_u_i_1_1_output_1_1_table_html_ac2cbc5aa1684a3b96a5bc13b8ccbd97d"><div class="ttname"><a href="class_text_u_i_1_1_output_1_1_table.html#ac2cbc5aa1684a3b96a5bc13b8ccbd97d">TextUI\Output\Table\setHorizontalAlignements</a></div><div class="ttdeci">setHorizontalAlignements(array $alignements)</div><div class="ttdef"><b>Definition</b> <a href="#l00145">Table.php:145</a></div></div>
+<div class="ttc" id="aclass_text_u_i_1_1_output_1_1_table_html_ac930ee5b0530bcad6f9fd0caa4caf4a0"><div class="ttname"><a href="class_text_u_i_1_1_output_1_1_table.html#ac930ee5b0530bcad6f9fd0caa4caf4a0">TextUI\Output\Table\setSimpleVerticalBorderChar</a></div><div class="ttdeci">setSimpleVerticalBorderChar(string $char)</div><div class="ttdef"><b>Definition</b> <a href="#l00445">Table.php:445</a></div></div>
+<div class="ttc" id="aclass_text_u_i_1_1_output_1_1_table_html_ad6f3fd0ed4e8d54cd1fcf8b2f10dda8d"><div class="ttname"><a href="class_text_u_i_1_1_output_1_1_table.html#ad6f3fd0ed4e8d54cd1fcf8b2f10dda8d">TextUI\Output\Table\setSpecialHorizontalBorderChar</a></div><div class="ttdeci">setSpecialHorizontalBorderChar(string $char)</div><div class="ttdef"><b>Definition</b> <a href="#l00462">Table.php:462</a></div></div>
 <div class="ttc" id="aclass_text_u_i_1_1_output_1_1_table_html_ae774ca9c47e24adfb104dabcb01156af"><div class="ttname"><a href="class_text_u_i_1_1_output_1_1_table.html#ae774ca9c47e24adfb104dabcb01156af">TextUI\Output\Table\__construct</a></div><div class="ttdeci">__construct(array $data)</div><div class="ttdef"><b>Definition</b> <a href="#l00056">Table.php:56</a></div></div>
 <div class="ttc" id="aclass_text_u_i_1_1_output_1_1_table_html_aec03c5e0dcc81c8dd7509c145259f621"><div class="ttname"><a href="class_text_u_i_1_1_output_1_1_table.html#aec03c5e0dcc81c8dd7509c145259f621">TextUI\Output\Table\$verticalBorderChar</a></div><div class="ttdeci">string $verticalBorderChar</div><div class="ttdef"><b>Definition</b> <a href="#l00022">Table.php:22</a></div></div>
-<div class="ttc" id="aclass_text_u_i_1_1_output_1_1_table_html_aed528cbb6573b19f79fe5561b1114652"><div class="ttname"><a href="class_text_u_i_1_1_output_1_1_table.html#aed528cbb6573b19f79fe5561b1114652">TextUI\Output\Table\buildHeaderHorizontalSeparatorStr</a></div><div class="ttdeci">buildHeaderHorizontalSeparatorStr(array $colsLen)</div><div class="ttdef"><b>Definition</b> <a href="#l00341">Table.php:341</a></div></div>
-<div class="ttc" id="aclass_text_u_i_1_1_output_1_1_table_html_aee3614c99a34639c6a85c17dba038113"><div class="ttname"><a href="class_text_u_i_1_1_output_1_1_table.html#aee3614c99a34639c6a85c17dba038113">TextUI\Output\Table\splitCells</a></div><div class="ttdeci">splitCells(array $data, array $colsLen)</div><div class="ttdef"><b>Definition</b> <a href="#l00303">Table.php:303</a></div></div>
+<div class="ttc" id="aclass_text_u_i_1_1_output_1_1_table_html_aed528cbb6573b19f79fe5561b1114652"><div class="ttname"><a href="class_text_u_i_1_1_output_1_1_table.html#aed528cbb6573b19f79fe5561b1114652">TextUI\Output\Table\buildHeaderHorizontalSeparatorStr</a></div><div class="ttdeci">buildHeaderHorizontalSeparatorStr(array $colsLen)</div><div class="ttdef"><b>Definition</b> <a href="#l00342">Table.php:342</a></div></div>
+<div class="ttc" id="aclass_text_u_i_1_1_output_1_1_table_html_aee3614c99a34639c6a85c17dba038113"><div class="ttname"><a href="class_text_u_i_1_1_output_1_1_table.html#aee3614c99a34639c6a85c17dba038113">TextUI\Output\Table\splitCells</a></div><div class="ttdeci">splitCells(array $data, array $colsLen)</div><div class="ttdef"><b>Definition</b> <a href="#l00304">Table.php:304</a></div></div>
 <div class="ttc" id="aclass_text_u_i_1_1_output_1_1_table_html_af95e373def7749f5f40659b063da46e6"><div class="ttname"><a href="class_text_u_i_1_1_output_1_1_table.html#af95e373def7749f5f40659b063da46e6">TextUI\Output\Table\$intersectionChar</a></div><div class="ttdeci">string $intersectionChar</div><div class="ttdef"><b>Definition</b> <a href="#l00020">Table.php:20</a></div></div>
-<div class="ttc" id="aclass_text_u_i_1_1_output_1_1_table_html_afd44e62db60c5ec9f3f5e76a3c2d32ba"><div class="ttname"><a href="class_text_u_i_1_1_output_1_1_table.html#afd44e62db60c5ec9f3f5e76a3c2d32ba">TextUI\Output\Table\buildFooterStr</a></div><div class="ttdeci">buildFooterStr(array $footer, array $colsLen, array $align)</div><div class="ttdef"><b>Definition</b> <a href="#l00157">Table.php:157</a></div></div>
+<div class="ttc" id="aclass_text_u_i_1_1_output_1_1_table_html_afd44e62db60c5ec9f3f5e76a3c2d32ba"><div class="ttname"><a href="class_text_u_i_1_1_output_1_1_table.html#afd44e62db60c5ec9f3f5e76a3c2d32ba">TextUI\Output\Table\buildFooterStr</a></div><div class="ttdeci">buildFooterStr(array $footer, array $colsLen, array $align)</div><div class="ttdef"><b>Definition</b> <a href="#l00158">Table.php:158</a></div></div>
 <div class="ttc" id="aclass_text_u_i_1_1_output_1_1_table_html_afdee872084b9ad2e9f2b7d04c1214679"><div class="ttname"><a href="class_text_u_i_1_1_output_1_1_table.html#afdee872084b9ad2e9f2b7d04c1214679">TextUI\Output\Table\$data</a></div><div class="ttdeci">readonly array $data</div><div class="ttdef"><b>Definition</b> <a href="#l00028">Table.php:28</a></div></div>
-<div class="ttc" id="aclass_text_u_i_1_1_output_1_1_table_html_afe0ec51c8b5286f40b537df0c4e96b20"><div class="ttname"><a href="class_text_u_i_1_1_output_1_1_table.html#afe0ec51c8b5286f40b537df0c4e96b20">TextUI\Output\Table\calcColsLenFromWidth</a></div><div class="ttdeci">calcColsLenFromWidth(array $width)</div><div class="ttdef"><b>Definition</b> <a href="#l00385">Table.php:385</a></div></div>
+<div class="ttc" id="aclass_text_u_i_1_1_output_1_1_table_html_afe0ec51c8b5286f40b537df0c4e96b20"><div class="ttname"><a href="class_text_u_i_1_1_output_1_1_table.html#afe0ec51c8b5286f40b537df0c4e96b20">TextUI\Output\Table\calcColsLenFromWidth</a></div><div class="ttdeci">calcColsLenFromWidth(array $width)</div><div class="ttdef"><b>Definition</b> <a href="#l00386">Table.php:386</a></div></div>
 <div class="ttc" id="aclass_text_u_i_1_1_utils_html"><div class="ttname"><a href="class_text_u_i_1_1_utils.html">TextUI\Utils</a></div><div class="ttdef"><b>Definition</b> <a href="_utils_8php_source.html#l00015">Utils.php:16</a></div></div>
 <div class="ttc" id="aclass_text_u_i_1_1_utils_html_a35530d517765736b53e5380fbb3e1412"><div class="ttname"><a href="class_text_u_i_1_1_utils.html#a35530d517765736b53e5380fbb3e1412">TextUI\Utils\strToParagraph</a></div><div class="ttdeci">static strToParagraph(string $text, int $len)</div><div class="ttdef"><b>Definition</b> <a href="_utils_8php_source.html#l00117">Utils.php:117</a></div></div>
 <div class="ttc" id="aclass_text_u_i_1_1_utils_html_ac0459c25f792d08c1042d633869e89e0"><div class="ttname"><a href="class_text_u_i_1_1_utils.html#ac0459c25f792d08c1042d633869e89e0">TextUI\Utils\detectScreenColumns</a></div><div class="ttdeci">static detectScreenColumns()</div><div class="ttdef"><b>Definition</b> <a href="_utils_8php_source.html#l00057">Utils.php:57</a></div></div>
