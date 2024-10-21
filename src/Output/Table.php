@@ -124,7 +124,8 @@ class Table implements DrawableInterface
     public function setColWidths(array $widths): Table
     {
         if (count($widths) !== count($this->data[array_key_first($this->data)])) {
-            throw new InvalidArgumentException("Number of column widths must be equal to the number of columns in the data.");
+            throw new InvalidArgumentException("Number of column widths must be "
+                    . "equal to the number of columns in the data.");
         }
         $this->width = $widths;
         return $this;

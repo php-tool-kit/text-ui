@@ -243,10 +243,12 @@ class Progress implements MeterInterface
     protected function setCurrentValue(float|int $value): void
     {
         if ($value < $this->currentValue) {
-            throw new InvalidArgumentException("Value cannot be less than current value: $value < {$this->currentValue}");
+            throw new InvalidArgumentException("Value cannot be less than "
+                    . "current value: $value < {$this->currentValue}");
         }
         if ($value > $this->maxValue) {
-            throw new InvalidArgumentException("Value cannot be greater than maximun value: $value > {$this->maxValue}");
+            throw new InvalidArgumentException("Value cannot be greater than "
+                    . "maximun value: $value > {$this->maxValue}");
         }
         $this->currentValue = $value;
     }

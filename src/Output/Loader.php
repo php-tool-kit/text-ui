@@ -18,7 +18,28 @@ class Loader implements MeterInterface
      *
      * @var array<string>
      */
-    protected array $indicators = ['    ', '   .', '  . ', ' .  ', '.   ', '.  .', '. . ', '..  ', '.. .', '... ', '....', '... ', '.. .', '..  ', '. . ', '.  .', '.   ', ' .  ', '  . ', '   .'];
+    protected array $indicators = [
+        '    ',
+        '   .',
+        '  . ',
+        ' .  ',
+        '.   ',
+        '.  .',
+        '. . ',
+        '..  ',
+        '.. .',
+        '... ',
+        '....',
+        '... ',
+        '.. .',
+        '..  ',
+        '. . ',
+        '.  .',
+        '.   ',
+        ' .  ',
+        '  . ',
+        '   .'
+    ];
     protected int $currentIndicatorIndex = 0;
 
     public function __construct()

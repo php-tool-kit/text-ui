@@ -70,7 +70,8 @@ class NumberEntry implements EntryInterface
                 settype($entry, 'int');
                 break;
             default:
-                throw new InvalidArgumentException("Only float|double|int|integer are allowed. {$this->outputType} is invalid!");
+                throw new InvalidArgumentException("Only float|double|int|integer"
+                        . " are allowed. {$this->outputType} is invalid!");
         }
         return $entry;
     }
