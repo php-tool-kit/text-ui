@@ -46,3 +46,7 @@ jobs:
     - name: Run Code Standard
       run: composer run-script phpcs
       
+    # Generate docs
+    - name: Generate docs
+      run: composer run-script doxygen
+      
