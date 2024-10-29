@@ -158,7 +158,8 @@ class NumberEntry implements EntryInterface
     public function read(): float|int
     {
         echo $this->label;
-        $entry = trim((string) fgets(STDIN));
+//        $entry = trim((string) fgets(STDIN));
+        $entry = trim(\TextUI\IO::readRawStdin());
         if (is_null($this->parser)) {
             return $this->defaultParser($entry);
         }
