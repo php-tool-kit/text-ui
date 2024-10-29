@@ -22,20 +22,23 @@
     },
     "autoload": {
         "psr-4": {
-            "TextUI\\": "src"
+            "TextUI\\": "src",
+            "TextUI\\Tests\\": "tests"
         }
     },
     "require-dev": {
         "phpstan/phpstan": "^1.12",
         "phpmd/phpmd": "^2.15",
-        "squizlabs/php_codesniffer": "*"
+        "squizlabs/php_codesniffer": "*",
+        "phpunit/phpunit": "^11.4"
     },
     "scripts": {
         "phpstan": "phpstan analyse -v --level=8 src",
         "phpmd": "phpmd src ansi cleancode,codesize,controversial,design,naming,unusedcode -v --color",
         "phpcs": "phpcs --standard=PSR12 src",
         "phpcbf": "phpcbf --standard=PSR12 src",
-        "doxygen": "doxygen Doxyfile"
+        "doxygen": "doxygen Doxyfile",
+        "test": "phpunit --bootstrap=tests/bootstrap.php --colors=auto --testdox --testdox-summary --coverage-html=coverage/html --coverage-filter=src tests"
     },
     "config": {
         "allow-plugins": {

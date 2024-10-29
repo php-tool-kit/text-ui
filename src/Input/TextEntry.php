@@ -32,6 +32,7 @@ class TextEntry implements EntryInterface
     public function read(): string
     {
         echo $this->label;
-        return trim((string) fgets(STDIN));
+        return trim(\TextUI\IO::readRawStdin());
+//        return trim((string) fgets(STDIN));
     }
 }

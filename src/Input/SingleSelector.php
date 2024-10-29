@@ -91,7 +91,8 @@ class SingleSelector implements EntryInterface
 
         while (true) {
             echo $this->prompt;
-            $selection = trim((string) fgets(STDIN));
+//            $selection = trim((string) fgets(STDIN));
+            $selection = trim(\TextUI\IO::readRawStdin());
             if (key_exists($selection, $this->options)) {
                 if ($this->returnOptionKey) {
                     return $selection;

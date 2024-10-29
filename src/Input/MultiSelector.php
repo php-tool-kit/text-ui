@@ -136,7 +136,8 @@ class MultiSelector implements EntryInterface
                 $lastOptionIsInvalid = false;
             }
             echo $this->prompt;
-            $selection = trim((string) fgets(STDIN));
+//            $selection = trim((string) fgets(STDIN));
+            $selection = trim(\TextUI\IO::readRawStdin());
             if ($selection === '') {
                 if ($this->returnOptionKey) {
                     return $this->selection;

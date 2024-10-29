@@ -28,10 +28,12 @@ class TextMultiLineEntry
         echo $this->label;
         echo PHP_EOL;
         $lines = [];
-        $entry = trim((string) fgets(STDIN));
+//        $entry = trim((string) fgets(STDIN));
+        $entry = trim(\TextUI\IO::readRawStdin());
         while ($entry !== '') {
             $lines[] = $entry;
-            $entry = trim((string) fgets(STDIN));
+//            $entry = trim((string) fgets(STDIN));
+            $entry = trim(\TextUI\IO::readRawStdin());
         }
         return $lines;
     }

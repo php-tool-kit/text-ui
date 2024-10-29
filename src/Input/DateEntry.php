@@ -54,7 +54,8 @@ class DateEntry implements EntryInterface
     public function read(): DateTime
     {
         echo $this->label;
-        $entry = trim((string) fgets(STDIN));
+//        $entry = trim((string) fgets(STDIN));
+        $entry = trim(\TextUI\IO::readRawStdin());
         if (!is_null($this->parser)) {
             $parser = $this->parser;
             if (!is_callable($parser)) {

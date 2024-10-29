@@ -9,7 +9,7 @@ namespace TextUI\Output;
  */
 class HLine implements DrawableInterface
 {
-    protected readonly string $char;
+    public readonly string $char;
 
     public function __construct(string $char = '-')
     {
