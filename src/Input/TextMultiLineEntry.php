@@ -10,7 +10,7 @@ namespace TextUI\Input;
  *
  * @author everton3x
  */
-class TextMultiLineEntry
+class TextMultiLineEntry implements EntryInterface
 {
     public readonly string $label;
 
