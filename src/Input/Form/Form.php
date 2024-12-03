@@ -1,5 +1,4 @@
 <?php
-
 namespace TextUI\Input\Form;
 
 use DateTime;
@@ -17,59 +16,61 @@ use function count;
  * Handles user input forms in a CLI environment.
  *
  * @package TextUI\Input\Form
+ * @author everton3x
  */
-class Form {
-    
+class Form
+{
+
     /**
      * @var string $title The title of the form.
      */
     protected readonly string $title;
-    
+
     /**
      * @var array $entries Stores the form entries.
      */
     protected array $entries = [];
-    
+
     /**
      * @var array $answers Stores the user's answers.
      */
     protected array $answers = [];
-    
+
     /**
      * @var bool $alwaysCleanScreen Determines if the screen should be cleared.
      */
     public bool $alwaysCleanScreen = true;
-    
+
     /**
      * @var bool $reviewAnswers Determines if the answers should be reviewed.
      */
     public bool $reviewAnswers = true;
-    
+
     /**
      * @var string $titleReview The title displayed during review.
      */
     protected string $titleReview = 'The data provided are:';
-    
+
     /**
      * @var array $btnReviewRestartForm Button configuration for restarting the form.
      */
     protected array $btnReviewRestartForm = ['R', 'Restart form'];
-    
+
     /**
      * @var array $btnReviewCancelForm Button configuration for canceling the form.
      */
     protected array $btnReviewCancelForm = ['C', 'Cancel form'];
-    
+
     /**
      * @var array $btnReviewSaveForm Button configuration for saving the form.
      */
     protected array $btnReviewSaveForm = ['S', 'Save data'];
-    
+
     /**
      * @var string $dateFormatReview Date format used during review.
      */
     protected string $dateFormatReview = 'Y-m-d';
-    
+
     /**
      * Form constructor.
      *
@@ -79,7 +80,7 @@ class Form {
     {
         $this->title = $title;
     }
-    
+
     /**
      * Sets the date format for reviewing answers.
      *
@@ -91,7 +92,7 @@ class Form {
         $this->dateFormatReview = $format;
         return $this;
     }
-    
+
     /**
      * Sets the review title.
      *
@@ -103,7 +104,7 @@ class Form {
         $this->titleReview = $title;
         return $this;
     }
-    
+
     /**
      * Sets the button configuration for restarting the form.
      *
@@ -115,7 +116,7 @@ class Form {
         $this->btnReviewRestartForm = $btn;
         return $this;
     }
-    
+
     /**
      * Sets the button configuration for canceling the form.
      *
@@ -127,7 +128,7 @@ class Form {
         $this->btnReviewCancelForm = $btn;
         return $this;
     }
-    
+
     /**
      * Sets the button configuration for saving the form.
      *
@@ -139,7 +140,7 @@ class Form {
         $this->btnReviewSaveForm = $btn;
         return $this;
     }
-    
+
     /**
      * Adds an entry to the form.
      *
@@ -152,16 +153,17 @@ class Form {
         $this->entries[$id] = $entry;
         return $this;
     }
-    
+
     /**
      * Retrieves the user's answers.
      *
      * @return array The user's answers.
      */
-    public function getAnswers(): array {
+    public function getAnswers(): array
+    {
         return $this->answers;
     }
-    
+
     /**
      * Displays the form, collects input, and reviews answers if enabled.
      *
@@ -170,19 +172,19 @@ class Form {
     public function ask(): bool
     {
         $this->clearScreen();
-        
+
         $this->drawTitle();
         $this->askAnswers();
         $hline = new HLine('=');
         $hline->draw();
-        
+
         $return = true;
-        if($this->reviewAnswers){
+        if ($this->reviewAnswers) {
             $return = $this->reviewAnswers();
         }
         return $return;
     }
-    
+
     /**
      * Reviews the user's answers and provides options.
      *
@@ -193,40 +195,40 @@ class Form {
         $this->clearScreen();
         $topHLine = new HLine('=');
         $bottomHLine = new HLine('-');
-        
+
         $topHLine->draw();
-        
+
         $data = [];
-        foreach ($this->entries as $id => $entry){
+        foreach ($this->entries as $id => $entry) {
             $data[$id] = [
                 $entry->label,
                 $this->parseAnswer($this->answers[$id])
             ];
         }
-        
+
         $table = new Table($data);
         $table->setIntersectionChar(' ');
         $table->setSimpleHorizontalBorderChar(' ');
         $table->setSimpleVerticalBorderChar(' ');
         $table->setSpecialHorizontalBorderChar(' ');
         $table->draw();
-        
+
         $bottomHLine->draw();
-        
+
         $action = $this->drawButtons();
-        
-        if($action === strtolower($this->btnReviewSaveForm[0])){
+
+        if ($action === strtolower($this->btnReviewSaveForm[0])) {
             return true;
-        }elseif (($action === strtolower($this->btnReviewCancelForm[0]))) {
+        } elseif (($action === strtolower($this->btnReviewCancelForm[0]))) {
             $this->answers = [];
             return false;
-        }elseif (($action === strtolower($this->btnReviewRestartForm[0]))) {
+        } elseif (($action === strtolower($this->btnReviewRestartForm[0]))) {
             return $this->ask();
-        }else{
+        } else {
             throw new InvalidArgumentException('Invalid option.');
         }
     }
-    
+
     /**
      * Parses an answer for display.
      *
@@ -235,25 +237,25 @@ class Form {
      */
     protected function parseAnswer(string|int|float|array|DateTime $answer): string
     {
-        if($answer instanceof DateTime){
+        if ($answer instanceof DateTime) {
             return $this->parseAnswerForDateTime($answer);
         }
-        
-        if(is_string($answer)){
+
+        if (is_string($answer)) {
             return $answer;
         }
-        
-        if(is_numeric($answer)){
+
+        if (is_numeric($answer)) {
             return $answer;
         }
-        
-        if(is_array($answer)){
+
+        if (is_array($answer)) {
             return $this->parseAnswerForArray($answer);
         }
-        
+
         throw new InvalidArgumentException('Entry is invalid type.');
     }
-    
+
     /**
      * Parses an array answer for display.
      *
@@ -264,7 +266,7 @@ class Form {
     {
         return join(', ', $answer);
     }
-    
+
     /**
      * Parses a DateTime answer for display.
      *
@@ -275,7 +277,7 @@ class Form {
     {
         return $answer->format($this->dateFormatReview);
     }
-    
+
     /**
      * Displays the review buttons and captures user input.
      *
@@ -293,18 +295,16 @@ class Form {
             $this->btnReviewCancelForm[1]
         );
         $action = strtolower(trim(fgets(STDIN)));
-        
-        if(
-            $action === strtolower($this->btnReviewSaveForm[0])
-            || $action === strtolower($this->btnReviewRestartForm[0])
-            || $action === strtolower($this->btnReviewCancelForm[0])
-        ){
+
+        if (
+            $action === strtolower($this->btnReviewSaveForm[0]) || $action === strtolower($this->btnReviewRestartForm[0]) || $action === strtolower($this->btnReviewCancelForm[0])
+        ) {
             return $action;
         }
-        
+
         $this->drawButtons();
     }
-    
+
     /**
      * Clears the screen if the alwaysCleanScreen property is true.
      *
@@ -312,11 +312,11 @@ class Form {
      */
     protected function clearScreen(): void
     {
-        if($this->alwaysCleanScreen){
+        if ($this->alwaysCleanScreen) {
             Command::send(Command::CLEAR_SCREEN);
         }
     }
-    
+
     /**
      * Asks the user for answers to the form entries.
      *
@@ -324,15 +324,15 @@ class Form {
      */
     protected function askAnswers(): void
     {
-        if(count($this->entries) === 0){
+        if (count($this->entries) === 0) {
             throw new LengthException('No entry is defined for the form.');
         }
-        
-        foreach ($this->entries as $id => $entry){
+
+        foreach ($this->entries as $id => $entry) {
             $this->answers[$id] = $entry->read();
         }
     }
-    
+
     /**
      * Displays the title of the form.
      *
@@ -342,10 +342,9 @@ class Form {
     {
         $topHLine = new HLine('=');
         $bottomHLine = new HLine('-');
-        
+
         $topHLine->draw();
         echo $this->title, PHP_EOL;
         $bottomHLine->draw();
-        
     }
 }
