@@ -16,12 +16,12 @@ use InvalidArgumentException;
  */
 class SingleSelector implements EntryInterface
 {
-    protected readonly string $label;
+    public readonly string $label;
     /**
      *
      * @var array<string>
      */
-    protected readonly array $options;
+    public readonly array $options;
     protected ?string $selectionInvalidMessage = null;
     protected string $prompt = '> ';
 

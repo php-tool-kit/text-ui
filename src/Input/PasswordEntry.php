@@ -18,7 +18,7 @@ namespace TextUI\Input;
  */
 class PasswordEntry implements EntryInterface
 {
-    protected readonly string $label;
+    public readonly string $label;
 
     public function __construct(string $label)
     {

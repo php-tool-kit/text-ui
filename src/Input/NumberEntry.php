@@ -14,7 +14,7 @@ use InvalidArgumentException;
  */
 class NumberEntry implements EntryInterface
 {
-    protected readonly string $label;
+    public readonly string $label;
     protected ?object $parser = null;
     protected string $decimalPoint;
     protected string $thousandsSep;

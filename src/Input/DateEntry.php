@@ -19,8 +19,8 @@ use DateTime;
  */
 class DateEntry implements EntryInterface
 {
-    protected readonly string $label;
-    protected readonly string $format;
+    public readonly string $label;
+    public readonly string $format;
     protected ?object $parser = null;
 
     /**

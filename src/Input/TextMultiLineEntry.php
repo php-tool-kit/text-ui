@@ -12,7 +12,7 @@ namespace TextUI\Input;
  */
 class TextMultiLineEntry
 {
-    protected readonly string $label;
+    public readonly string $label;
 
     public function __construct(string $label)
     {
