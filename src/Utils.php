@@ -76,6 +76,33 @@ class Utils
     }
 
     /**
+     * Detects the number of lines in the terminal.
+     *
+     * @return int
+     * @throws UnknowOSException
+     */
+    public static function detectScreenLines(): int
+    {
+        switch (self::detectOS()) {
+            case OperatingSystem::Windows:
+                exec('mode con', $output, $exitCode);
+                $outputLines = preg_grep("/(lin)/i", $output);
+                if (!is_array($outputLines)) {
+                    throw new UnexpectedValueException();
+                }
+                if (count($outputLines) === 1) {
+                    return (int) join('', preg_replace("/[^0-9]/", "", $outputLines));
+                }
+                return 0;
+            case OperatingSystem::Linux:
+                exec('tput lines', $output, $exitCode);
+                return (int) join('', $output);
+            default:
+                throw new UnknowOSException();
+        }
+    }
+
+    /**
      * Calculates the number of years, months, days, hours, minutes and seconds between two timestamps.
      *
      * @param int $timestamp1
