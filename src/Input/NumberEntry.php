@@ -1,5 +1,4 @@
 <?php
-
 namespace TextUI\Input;
 
 use BadFunctionCallException;
@@ -14,12 +13,14 @@ use InvalidArgumentException;
  */
 class NumberEntry implements EntryInterface
 {
+
     public readonly string $label;
     protected ?object $parser = null;
     protected string $decimalPoint;
     protected string $thousandsSep;
     protected string $outputType = 'float';
     protected ?int $decimals = null;
+    protected string|null $default = null;
 
     public function __construct(string $label)
     {
@@ -27,6 +28,18 @@ class NumberEntry implements EntryInterface
         $localeconv = localeconv();
         $this->decimalPoint = $localeconv['decimal_point'];
         $this->thousandsSep = $localeconv['thousands_sep'];
+    }
+
+    /**
+     * Sets default value.
+     * 
+     * @param string $default
+     * @return NumberEntry
+     */
+    public function setDefault(string $default): NumberEntry
+    {
+        $this->default = $default;
+        return $this;
     }
 
     /**
@@ -157,9 +170,17 @@ class NumberEntry implements EntryInterface
      */
     public function read(): float|int
     {
-        echo $this->label;
-//        $entry = trim((string) fgets(STDIN));
+        $default = '';
+        if (!is_null($this->default)) {
+            $default = "[{$this->default}] ";
+        }
+        echo $this->label, $default;
         $entry = trim(\TextUI\IO::readRawStdin());
+        if (!is_null($this->default)) {
+            if (strlen($entry) === 0) {
+                $entry = $this->default;
+            }
+        }
         if (is_null($this->parser)) {
             return $this->defaultParser($entry);
         }

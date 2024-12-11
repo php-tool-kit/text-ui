@@ -3,36 +3,44 @@
 namespace TextUI\Input;
 
 /**
- * User text input.
+ * Class ReadOnlyEntry
  *
- * Displays a message to the user and returns the text the user entered. When
- * the user presses ENTER, the raw text entered is fed to the trim() function
- * and returned.
- *
- * The label is displayed on the same line as the entry point. This means that
- * if you want to display the label above the input space, add a line break at
- * the end of $label. The same goes for whitespace and tabs.
+ * Represents a read-only form entry with a label and a value.
  *
  * @author everton3x
  */
-class TextEntry implements EntryInterface
+class ReadOnlyEntry implements EntryInterface
 {
+    /**
+     * @var string $label The label of the entry.
+     */
     public readonly string $label;
+    
+    /**
+     * @var mixed $value The value of the entry.
+     */
+    public readonly mixed $value;
 
-    public function __construct(string $label)
+    /**
+     * ReadOnlyEntry constructor.
+     *
+     * @param string $label The label of the entry.
+     * @param mixed $value The value of the entry.
+     */
+    public function __construct(string $label, mixed $value)
     {
         $this->label = $label;
+        $this->value = $value;
     }
 
     /**
-     * Displays the label and waits for user input.
-     * @return string Returns the text entered by the user as processed by
-     * trim().
+     * Reads and returns the value of the entry.
+     *
+     * @return mixed The value of the entry.
      */
-    public function read(): string
+    public function read(): mixed
     {
-        echo $this->label;
-        return trim(\TextUI\IO::readRawStdin());
-//        return trim((string) fgets(STDIN));
+        echo $this->label, $this->value, PHP_EOL;
+        return $this->value;
     }
 }

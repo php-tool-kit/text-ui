@@ -80,6 +80,22 @@ class Form
     {
         $this->title = $title;
     }
+    
+    /**
+     * Sets defaults values for entries.
+     * 
+     * @param array $defaults Array with entry id and default value.
+     * @return Form
+     */
+    public function setDefaultsValues(array $defaults): Form
+    {
+        foreach($defaults as $id => $value){
+            if(key_exists($id, $this->entries) && method_exists($this->entries[$id], 'setDefault')){
+                $this->entries[$id]->setDefault($value);
+            }
+        }
+        return $this;
+    }
 
     /**
      * Sets the date format for reviewing answers.
@@ -200,6 +216,9 @@ class Form
 
         $data = [];
         foreach ($this->entries as $id => $entry) {
+            if($entry instanceof \TextUI\Input\HiddenEntry){
+                continue;
+            }
             $data[$id] = [
                 $entry->label,
                 $this->parseAnswer($this->answers[$id])

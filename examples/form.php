@@ -14,6 +14,7 @@ $form->addEntry('text', new TextEntry('Text: '))
     ->addEntry('multiline', new TextUI\Input\TextMultiLineEntry('Textarea: '))
     ->addEntry('single', new TextUI\Input\SingleSelector('Select one: ', ['Option 1', 'Option 2', 'Option 3']))
     ->addEntry('multi', new TextUI\Input\MultiSelector('Select one or more: ', ['Option 1', 'Option 2', 'Option 3']))
+    ->setDefaultsValues(['text' => 'Hello world', 'multi' => ['Option 1', 'Option 3']])
     ;
 
 $form->ask();

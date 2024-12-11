@@ -3,36 +3,36 @@
 namespace TextUI\Input;
 
 /**
- * User text input.
+ * Class HiddenEntry
  *
- * Displays a message to the user and returns the text the user entered. When
- * the user presses ENTER, the raw text entered is fed to the trim() function
- * and returned.
+ * Represents a hidden form entry with a value that is not displayed.
  *
- * The label is displayed on the same line as the entry point. This means that
- * if you want to display the label above the input space, add a line break at
- * the end of $label. The same goes for whitespace and tabs.
- *
- * @author everton3x
+ * @package TextUI\Input
  */
-class TextEntry implements EntryInterface
+class HiddenEntry implements EntryInterface
 {
-    public readonly string $label;
+    /**
+     * @var mixed $value The value of the entry.
+     */
+    public readonly mixed $value;
 
-    public function __construct(string $label)
+    /**
+     * HiddenEntry constructor.
+     *
+     * @param mixed $value The value of the entry.
+     */
+    public function __construct(mixed $value)
     {
-        $this->label = $label;
+        $this->value = $value;
     }
 
     /**
-     * Displays the label and waits for user input.
-     * @return string Returns the text entered by the user as processed by
-     * trim().
+     * Reads and returns the value of the entry.
+     *
+     * @return mixed The value of the entry.
      */
-    public function read(): string
+    public function read(): mixed
     {
-        echo $this->label;
-        return trim(\TextUI\IO::readRawStdin());
-//        return trim((string) fgets(STDIN));
+        return $this->value;
     }
 }

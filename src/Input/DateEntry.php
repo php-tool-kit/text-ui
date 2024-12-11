@@ -1,5 +1,4 @@
 <?php
-
 namespace TextUI\Input;
 
 use BadFunctionCallException;
@@ -19,9 +18,11 @@ use DateTime;
  */
 class DateEntry implements EntryInterface
 {
+
     public readonly string $label;
     public readonly string $format;
     protected ?object $parser = null;
+    protected string|null $default = null;
 
     /**
      *
@@ -33,6 +34,18 @@ class DateEntry implements EntryInterface
     {
         $this->label = $label;
         $this->format = $format;
+    }
+
+    /**
+     * Sets date default.
+     * 
+     * @param string $default
+     * @return DateEntry
+     */
+    public function setDefault(string $default): DateEntry
+    {
+        $this->default = $default;
+        return $this;
     }
 
     /**
@@ -53,9 +66,17 @@ class DateEntry implements EntryInterface
 
     public function read(): DateTime
     {
-        echo $this->label;
-//        $entry = trim((string) fgets(STDIN));
+        $default = '';
+        if (!is_null($this->default)) {
+            $default = "[{$this->default}] ";
+        }
+        echo $this->label, $default;
         $entry = trim(\TextUI\IO::readRawStdin());
+        if (!is_null($this->default)) {
+            if (strlen($entry) === 0) {
+                $entry = $this->default;
+            }
+        }
         if (!is_null($this->parser)) {
             $parser = $this->parser;
             if (!is_callable($parser)) {

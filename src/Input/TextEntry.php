@@ -18,10 +18,23 @@ namespace TextUI\Input;
 class TextEntry implements EntryInterface
 {
     public readonly string $label;
+    protected string|null $default = null;
 
     public function __construct(string $label)
     {
         $this->label = $label;
+    }
+    
+    /**
+     * Sets a default input text.
+     * 
+     * @param string $default
+     * @return TextEntry
+     */
+    public function setDefault(string $default): TextEntry
+    {
+        $this->default = $default;
+        return $this;
     }
 
     /**
@@ -31,8 +44,17 @@ class TextEntry implements EntryInterface
      */
     public function read(): string
     {
-        echo $this->label;
-        return trim(\TextUI\IO::readRawStdin());
-//        return trim((string) fgets(STDIN));
+        $default = '';
+        if(!is_null($this->default)){
+            $default = "[{$this->default}] ";
+        }
+        echo $this->label, $default;
+        $userInput = trim(\TextUI\IO::readRawStdin());
+        if(!is_null($this->default)){
+            if(strlen($userInput) === 0){
+                return $this->default;
+            }
+        }
+        return $userInput;
     }
 }

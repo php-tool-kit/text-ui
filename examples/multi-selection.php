@@ -7,4 +7,5 @@ $select->setSelectionInvalidMessage('Option is invalid!');
 //$select->returnOptionKey = true;
 //$select->clearScreen = false;
 $select->setPrompt('Choose: ');
-echo var_representation($select->read());
+$select->setDefault('Anne', 'Roger');
+echo print_r($select->read());

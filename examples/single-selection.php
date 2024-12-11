@@ -6,4 +6,5 @@ $select = new TextUI\Input\SingleSelector('Select 1 option:', ['Mary', 'Anne', '
 $select->setSelectionInvalidMessage('Option is invalid!');
 //$select->returnOptionKey = true;
 $select->setPrompt('Choose: ');
+$select->setDefault('Peter');
 echo "You selected '{$select->read()}'".PHP_EOL;

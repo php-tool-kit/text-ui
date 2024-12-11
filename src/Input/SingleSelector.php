@@ -17,6 +17,7 @@ use InvalidArgumentException;
 class SingleSelector implements EntryInterface
 {
     public readonly string $label;
+    protected string|null $default = null;
     /**
      *
      * @var array<string>
@@ -44,6 +45,17 @@ class SingleSelector implements EntryInterface
         }
         $this->label = $label;
         $this->options = $options;
+    }
+    
+    /**
+     * Sets the default option.
+     * @param string $default The label of the default option.
+     * @return SingleSelector
+     */
+    public function setDefault(string $default): SingleSelector
+    {
+        $this->default = $default;
+        return $this;
     }
 
     /**
@@ -88,11 +100,23 @@ class SingleSelector implements EntryInterface
         foreach ($this->options as $index => $label) {
             printf("[ %{$maxlenght}s ]\t%s" . PHP_EOL, $index, $label);
         }
+        
+        $default = '';
+        if(!is_null($this->default)){
+            $keyDefault = array_search($this->default, $this->options);
+            echo PHP_EOL, "[$keyDefault => {$this->default}] ";
+        }
 
         while (true) {
             echo $this->prompt;
 //            $selection = trim((string) fgets(STDIN));
             $selection = trim(\TextUI\IO::readRawStdin());
+            
+            if(!is_null($this->default)){
+                if(strlen($selection) === 0){
+                    $selection = $keyDefault;
+                }
+            }
             if (key_exists($selection, $this->options)) {
                 if ($this->returnOptionKey) {
                     return $selection;

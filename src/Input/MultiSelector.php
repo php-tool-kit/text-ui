@@ -59,7 +59,26 @@ class MultiSelector implements EntryInterface
         $this->label = $label;
         $this->options = $options;
     }
-
+    
+    /**
+     * Configures the options that are selected by default.
+     * 
+     * @param mixed $default List with labels of the default options.
+     * @return MultiSelector
+     */
+    public function setDefault(mixed $default): MultiSelector
+    {
+        $keys = [];
+        foreach ($default as $item){
+            $index = array_search($item, $this->options, true);
+            if($index !== false){
+                $keys[] = $index;
+            }
+        }
+        $this->setDefaultOptions(...$keys);
+        return $this;
+    }
+    
     /**
      * Sets a message to be displayed when an invalid value is selected.
      *
