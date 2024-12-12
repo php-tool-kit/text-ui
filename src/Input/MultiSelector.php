@@ -145,7 +145,7 @@ class MultiSelector implements EntryInterface
             }
             foreach ($this->options as $index => $label) {
                 $selected = ' ';
-                if (array_search($index, $this->selection) !== false) {
+                if (array_search(strtolower($index), $this->selection) !== false) {
                     $selected = 'X';
                 }
                 printf("[%s] [ %{$maxlenght}s ]\t%s" . PHP_EOL, $selected, $index, $label);
@@ -155,7 +155,6 @@ class MultiSelector implements EntryInterface
                 $lastOptionIsInvalid = false;
             }
             echo $this->prompt;
-//            $selection = trim((string) fgets(STDIN));
             $selection = trim(\TextUI\IO::readRawStdin());
             if ($selection === '') {
                 if ($this->returnOptionKey) {
@@ -163,19 +162,21 @@ class MultiSelector implements EntryInterface
                 } else {
                     $result = [];
                     foreach ($this->options as $key => $value) {
-                        if (array_search($key, $this->selection) !== false) {
+                        if (array_search(strtolower($key), $this->selection) !== false) {
                             $result[$key] = $value;
                         }
                     }
                     return $result;
                 }
             }
-            if (key_exists($selection, $this->options)) {
-                $index = array_search($selection, $this->selection);
+            
+            $options = array_change_key_case($this->options, CASE_LOWER);
+            if (key_exists(strtolower($selection), $options)) {
+                $index = array_search(strtolower($selection), $this->selection);
                 if ($index !== false) {
                     unset($this->selection[$index]);
                 } else {
-                    $this->selection[] = $selection;
+                    $this->selection[] = strtolower($selection);
                 }
             } else {
                 $lastOptionIsInvalid = true;

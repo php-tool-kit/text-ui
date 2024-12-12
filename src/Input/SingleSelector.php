@@ -117,11 +117,12 @@ class SingleSelector implements EntryInterface
                     $selection = $keyDefault;
                 }
             }
-            if (key_exists($selection, $this->options)) {
+            $options = array_change_key_case($this->options, CASE_LOWER);
+            if (key_exists(strtolower($selection), $options)) {
                 if ($this->returnOptionKey) {
-                    return $selection;
+                    return strtolower($selection);
                 }
-                return $this->options[$selection];
+                return $options[strtolower($selection)];
             }
             if (!is_null($this->selectionInvalidMessage)) {
                 echo $this->selectionInvalidMessage . PHP_EOL;
