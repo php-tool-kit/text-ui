@@ -155,4 +155,16 @@ class Utils
         }
         return $paragraphs;
     }
+    
+    /**
+     * Creates a pause in execution and waits for the user to press ENTER to continue.
+     * 
+     * @param string $message
+     * @return void
+     */
+    public static function pause(string $message = 'Press ENTER to continue.'): void
+    {
+        echo $message;
+        $pause = fgets(STDIN);
+    }
 }
